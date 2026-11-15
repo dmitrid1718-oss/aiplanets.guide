@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Low Orbit · Two Planets</title>
+<meta name="description" content="Level 2 of the Two Planets AI survival guide: how to ask Claude and ChatGPT better questions, check their answers, and use files, models, search, memory, projects and privacy settings.">
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="guide.css">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<div class="wrap" id="top">
+
+  <nav class="topnav" aria-label="Guide sections">
+    <a class="brand" href="index.html"><span class="orbs" aria-hidden="true"><i></i><i></i></span><b>Two Planets</b></a>
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="level1.html">1 · Launch pad</a></li>
+      <li><a href="level2.html" aria-current="page">2 · Low orbit</a></li>
+      <li><a href="level3.html">3 · Deep space</a></li>
+      <li><a href="level4.html">4 · Mission control</a></li>
+      <li><a class="sos" href="help.html">Something went wrong</a></li>
+    </ul>
+  </nav>
+
+  <header class="lvl-hero">
+    <div class="stage"><span class="num">Level 2</span><span class="eyebrow">Low orbit</span></div>
+    <h1>Ask better. Check everything.</h1>
+    <p class="sub">You already use Claude or ChatGPT now and then. This level teaches the handful of habits that turn a so-so answer into a useful one, and the settings that decide what the AI sees, remembers and keeps.</p>
+    <div class="who">
+      <div><b>This level is for you if</b>you ask the AI simple questions once in a while, and the answers feel generic, a bit off, or confidently wrong.</div>
+      <div><b>By the end you will</b>write a clear request, push back on a weak answer, upload a file, check facts, pick a model, and find the memory and privacy switches on both planets.</div>
+    </div>
+    <aside class="bertie">
+      <span class="face" aria-hidden="true"></span>
+      <div><p><b>Bertie's mistake at this level</b>Bertie typed "write email landlord" into a chat, got a stiff letter about a problem he never mentioned, and told everyone the AI was useless. Three seconds later he realized he had never said what was broken, how long it had been broken, or that he wanted it fixed by Friday.</p><p class="lesson">The AI only knows what you tell it. A vague one-liner gets a vague guess.</p></div>
+    </aside>
+  </header>
+
+  <ul class="toc" aria-label="On this page">
+    <li><a href="#ask">1 · How to ask well</a></li>
+    <li><a href="#follow-up">2 · Don't settle</a></li>
+    <li><a href="#files">3 · Files, photos, voice</a></li>
+    <li><a href="#checking">4 · Checking answers</a></li>
+    <li><a href="#models">5 · Models and thinking</a></li>
+    <li><a href="#search">6 · Web search and cutoffs</a></li>
+    <li><a href="#memory">7 · Memory</a></li>
+    <li><a href="#projects">8 · Projects</a></li>
+    <li><a href="#privacy">9 · Privacy and your data</a></li>
+    <li><a href="#recipes">10 · Everyday recipes</a></li>
+    <li><a href="#limits">11 · Usage limits</a></li>
+    <li><a href="#checklist">Level-up checklist</a></li>
+  </ul>
+
+  <!-- 1. HOW TO ASK WELL -->
+  <section class="topic" id="ask">
+    <header><p class="eyebrow">Topic 1 · Asking</p><h2>How to ask well: the recipe</h2></header>
+    <p class="first"><b>Do this first</b>Before you press send, reread your message and ask: would a smart stranger who has never met me know exactly what to do?</p>
+    <div class="fmt">
+      <div><h3>What it is</h3>
+        <p>A prompt is the message you send. The model answers by predicting likely text that follows from everything in the chat. If your message is thin, it fills the gaps with the most common, most generic guess.</p>
+        <p>Anthropic's own advice is to treat Claude like "a brilliant but new employee who lacks context." OpenAI's advice is to be "specific, descriptive and as detailed as possible about the desired context, outcome, length, format, style." The two companies agree: detail in, quality out.</p>
+      </div>
+      <div><h3>How to</h3>
+        <ol>
+          <li><b>Goal.</b> Say what you want done, in one sentence, at the start.</li>
+          <li><b>Context.</b> Give the facts it can't know: dates, amounts, names, what you already tried.</li>
+          <li><b>Who it's for.</b> Name the reader: your landlord, a 10-year-old, a hiring manager.</li>
+          <li><b>Examples.</b> Paste a sample of the tone or format you like.</li>
+          <li><b>Format.</b> Ask for a list, a table, an email, or steps.</li>
+          <li><b>Length.</b> Use a number: "under 150 words" or "5 bullet points." Avoid "fairly short."</li>
+        </ol>
+      </div>
+      <div class="wide watch"><h3>What can go wrong</h3>
+        <ul>
+          <li>You leave out the one fact that matters (the deadline, the budget, the allergy), and the answer ignores it.</li>
+          <li>You only say what to avoid. Both companies advise saying what to do instead. "Write in plain sentences" works better than "don't be wordy."</li>
+          <li>You paste a long document after your question. Anthropic recommends putting long documents first and your question at the end.</li>
+          <li>You put private details in the prompt that you don't need to share. Use "[my address]" or a first name only.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tbl"><table>
+      <caption class="chk-title">The six-part recipe at a glance</caption>
+      <thead><tr><th scope="col">Part</th><th scope="col">Ask yourself</th><th scope="col">Example phrase</th></tr></thead>
+      <tbody>
+        <tr><td>Goal</td><td>What do I want at the end?</td><td>"Help me write a complaint to my airline asking for a refund."</td></tr>
+        <tr><td>Context</td><td>What does it need to know?</td><td>"Flight was cancelled on 3 October, I paid $412, I rebooked myself."</td></tr>
+        <tr><td>Who it's for</td><td>Who reads the result?</td><td>"It goes to a customer service team."</td></tr>
+        <tr><td>Examples</td><td>Can I show what I mean?</td><td>"Here is an email I wrote before that had the right tone: ..."</td></tr>
+        <tr><td>Format</td><td>What shape should it take?</td><td>"An email with a subject line."</td></tr>
+        <tr><td>Length</td><td>How long, exactly?</td><td>"Under 200 words."</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="chk-title">Before and after</h3>
+    <div class="prompts">
+      <div class="prompt"><h4>Before: vague</h4><blockquote>dinner ideas</blockquote></div>
+      <div class="prompt"><h4>After: the recipe</h4><blockquote>I need three dinner ideas for tonight for two adults. We have chicken thighs, rice, a can of coconut milk, spinach and onions. No nuts (allergy). I have 40 minutes and one pan. Give each idea a name, a 5-step method and a shopping list of anything missing.</blockquote></div>
+      <div class="prompt"><h4>Before: vague</h4><blockquote>explain inflation</blockquote></div>
+      <div class="prompt"><h4>After: the recipe</h4><blockquote>Explain inflation to my 14-year-old, who just asked why her favorite snack costs more than last year. Use one everyday example and no jargon. Keep it to 120 words, then give one question she can think about.</blockquote></div>
+      <div class="prompt"><h4>Before: vague</h4><blockquote>make my resume better</blockquote></div>
+      <div class="prompt"><h4>After: the recipe</h4><blockquote>Below is my resume, then a job posting. I'm applying for this warehouse supervisor role. Rewrite my three most recent job descriptions so they match the posting's skills, using only facts already in my resume. Keep each to 3 bullet points that start with a verb. Then list any gaps between my resume and the posting.
+
+"""
+[paste resume]
+"""
+"""
+[paste job posting]
+"""</blockquote></div>
+    </div>
+
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b>
+        <ul>
+          <li>Anthropic's guide says to give the reason behind a rule. Its example: "read aloud by a text-to-speech engine, so never use ellipses." Claude can apply the reason to cases you didn't list.</li>
+          <li>Examples are "one of the most reliable ways to steer" tone and format. The guide suggests 3 to 5 varied examples.</li>
+          <li>You can wrap parts of a long prompt in labels, such as <code>&lt;letter&gt;</code> ... <code>&lt;/letter&gt;</code>, so Claude can tell your instructions from your pasted text.</li>
+          <li>For a hard problem, the guide says "think thoroughly" often works better than writing out a step-by-step plan yourself.</li>
+          <li>With a long document, paste it first and ask your question last. Anthropic reports that this ordering can improve quality "by up to 30 percent." Asking Claude to quote the relevant passages first also helps.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b>
+        <ul>
+          <li>OpenAI's guide says to put instructions first and separate them from the pasted material with <code>###</code> or <code>"""</code>.</li>
+          <li>Show the format you want with an example. Start with no examples, then add a few if the first answer misses the shape.</li>
+          <li>Replace vague words with exact ones. OpenAI's own example swaps "fairly short" for a set number of sentences.</li>
+          <li>Phrase instructions as what you want it to do.</li>
+          <li>The guide also says to use the latest model. Topic 5 shows how to pick one.</li>
+          <li>OpenAI wrote this guide for developers. Its advice on clarity, format and examples applies the same way in the chat app.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/be-clear-and-direct" target="_blank" rel="noopener">Anthropic, prompting best practices</a> · <a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api" target="_blank" rel="noopener">OpenAI, best practices for prompt engineering</a> · <a href="https://developers.google.com/machine-learning/crash-course/llm/transformers" target="_blank" rel="noopener">Google, how LLMs predict text</a></p>
+  </section>
+
+  <!-- 2. DON'T SETTLE -->
+  <section class="topic" id="follow-up">
+    <header><p class="eyebrow">Topic 2 · Conversation</p><h2>Don't settle for the first answer</h2></header>
+    <p class="first"><b>Do this first</b>After the next answer you get, reply with one specific change: "Shorter," "Warmer," "Use my numbers," or "What did you assume?"</p>
+    <div class="fmt">
+      <div><h3>What it is</h3>
+        <p>A chat is a conversation. Every message you add stays in the model's working memory for that chat, called the context window. So your follow-ups build on what came before, and you can steer the answer one step at a time.</p>
+        <p>The model picks each word from a range of likely options, so the same question can produce a different answer each time. That is normal. It also means a second try can be better than the first.</p>
+      </div>
+      <div><h3>How to</h3>
+        <ol>
+          <li><b>Follow up with a precise fix.</b> Point at the part you want changed: "Keep paragraph one. Rewrite paragraph two in plain words."</li>
+          <li><b>Ask it to ask you questions.</b> End your first message with "Before you answer, ask me up to 5 questions about anything you need to know." Answer them, then let it write.</li>
+          <li><b>Edit your earlier message</b> when you realize your first prompt was the problem. Fixing the question beats arguing with the answer.</li>
+          <li><b>Try again</b> for a fresh version of the same request, then keep the best one.</li>
+          <li><b>Start a new chat</b> when the conversation goes off track, or when you change subject. Paste a short summary of what matters so far.</li>
+        </ol>
+      </div>
+      <div class="wide watch"><h3>What can go wrong</h3>
+        <ul>
+          <li>Long chats get worse. Anthropic's documentation names this "context rot": "as token count grows, accuracy and recall degrade." A fresh chat with a tight summary often beats message number 60.</li>
+          <li>An early mistake sticks. If the AI misread you in message one, it may keep building on that error. Edit the first message or start over.</li>
+          <li>You push it until it agrees with you. A reworded answer is not a checked answer. See Topic 4 on sycophancy.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prompts">
+      <div class="prompt"><h4>Make it ask first</h4><blockquote>I want to plan a small 60th birthday dinner for my mother. Before you suggest anything, ask me up to 5 questions about what you need to know. Ask them one list at a time.</blockquote></div>
+      <div class="prompt"><h4>Find the hidden guesses</h4><blockquote>List every assumption you made in that answer that I didn't tell you. Mark the ones that would change your advice if they were wrong.</blockquote></div>
+      <div class="prompt"><h4>Targeted fix</h4><blockquote>Good start. Keep the structure. Change only two things: cut it to 100 words, and replace "we regret" with something a real person would say.</blockquote></div>
+      <div class="prompt"><h4>Hand-off to a fresh chat</h4><blockquote>Summarize this conversation in 8 bullet points: my goal, the facts I gave you, the decisions we made and what is still open. I'll paste it into a new chat.</blockquote></div>
+    </div>
+
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b>
+        <ul>
+          <li>You can edit an earlier message. Claude then branches into a separate version of the chat, and your earlier work is kept.</li>
+          <li>Under each reply you'll see small buttons. We couldn't confirm the name or behavior of a retry button on Anthropic's help pages this round, so check what your app shows.</li>
+          <li>With code execution turned on, Claude automatically summarizes earlier messages when a chat gets long, so chats can "continue indefinitely in most cases." That summarizing uses more of your usage limit.</li>
+          <li>On paid plans, current models hold up to 1M tokens in one chat. Anthropic says 200K tokens is about 500 pages. The Free plan figure isn't stated.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b>
+        <ul>
+          <li>On the web, hover over a message, open More actions (⋯), and choose “Branch in new chat” to continue from that point without changing the original. OpenAI says this is available to signed-in web users. Message editing, including edits to messages with attachments, is also documented; the exact controls vary by platform. Try it on a low-stakes chat first.</li>
+          <li>The working memory for one chat is smaller on lower plans. OpenAI's pricing page lists 27K tokens for Instant on Free, 54K on Go and Plus, and 128K on Pro, with larger windows for the reasoning models. At about 0.75 words per token, 27K tokens is roughly 20,000 words.</li>
+          <li>OpenAI notes that system instructions and memories also use part of that window. Long chats run out of room sooner than you'd think.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://platform.claude.com/docs/en/build-with-claude/context-windows" target="_blank" rel="noopener">Anthropic, context windows</a> · <a href="https://support.claude.com/en/articles/8606394-how-large-is-claude-s-context-window" target="_blank" rel="noopener">Claude, context window size</a> · <a href="https://support.claude.com/en/articles/17153992-what-are-artifacts-and-how-do-i-use-them" target="_blank" rel="noopener">Claude, artifacts and editing</a> · <a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">ChatGPT pricing (context windows)</a> · <a href="https://help.openai.com/en/articles/4936856-what-are-tokens-and-how-to-count-them" target="_blank" rel="noopener">OpenAI, what are tokens</a> · <a href="https://help.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">OpenAI, ChatGPT release notes</a></p>
+  </section>
+
+  <!-- 3. FILES, PHOTOS, VOICE -->
+  <section class="topic" id="files">
+    <header><p class="eyebrow">Topic 3 · Beyond typing</p><h2>Files, photos and voice</h2></header>
+    <p class="first"><b>Do this first</b>Take a clear, well-lit photo of something you need help with (a dashboard warning light, a confusing form, a label) and ask the AI what it is and what to do next.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3>
+        <p>Both planets read more than typed text. You can attach documents, spreadsheets and photos to a message, and you can talk out loud with voice mode. The file goes into the chat's working memory, so the AI can quote it, summarize it or answer questions about it.</p>
+        <p>Good uses: a photo of a broken part to learn its name, a PDF letter from your insurer you want explained, a spreadsheet of household spending to sort into categories, a long contract to summarize before you read it in full.</p>
+      </div>
+      <div><h3>How to</h3>
+        <ol>
+          <li>Attach the file, then say what it is and what you want: "This is a letter from my water company. Explain what they want from me and by when."</li>
+          <li>For photos, fill the frame, avoid glare, and hold the camera straight. Add a second photo from another angle if needed.</li>
+          <li>For a spreadsheet, tell it what the columns mean and what question you want answered.</li>
+          <li>Ask it to quote the line it relies on. That makes checking quick.</li>
+          <li>For voice, speak your full request as you would type it. Read the transcript afterward for anything it misheard.</li>
+        </ol>
+      </div>
+      <div class="wide watch"><h3>What can go wrong</h3>
+        <ul>
+          <li><b>Blurry or tiny images get misread.</b> Anthropic warns that Claude may hallucinate on low-quality, rotated or very small images (under 200 pixels), and that object counts are approximate.</li>
+          <li><b>It can't tell you if an image is AI-made.</b> Anthropic states Claude "cannot determine whether an image is AI-generated." Don't use a chatbot as a fake-photo detector.</li>
+          <li><b>Medical scans are off limits.</b> Claude's vision is not for CT or MRI diagnosis. Take scans and results to your doctor.</li>
+          <li><b>What not to upload:</b> passwords, full Social Security numbers, bank or card numbers, ID scans, other people's private documents, or anything your employer hasn't cleared. Black out account numbers on bills before you take the photo. If you already shared something, see the <a href="help.html">Something went wrong</a> page.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b>
+        <ul>
+          <li>Up to 500MB per file and 20 files per chat.</li>
+          <li>Images up to 8000 x 8000 pixels. JPEG, PNG, GIF (first frame only) and WebP.</li>
+          <li>PDFs up to 1,000 pages. Claude analyzes charts and pictures inside a PDF only up to 100 pages.</li>
+          <li>Documents: PDF, DOCX, CSV, TXT, HTML, ODT, RTF, EPUB, JSON and XLSX.</li>
+          <li>Files inside a Project: 30MB each.</li>
+          <li>Claude will not name people in images.</li>
+          <li>Voice mode is in beta on all plans, including Free, on mobile, desktop and web. Tap the sound-wave icon. You can go hands-free or push-to-talk, and Claude saves a text transcript. Voice counts toward your usage limit.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b>
+        <ul>
+          <li>Up to 512MB per file, and 2 million tokens per text file.</li>
+          <li>Spreadsheets about 50MB, images 20MB each.</li>
+          <li>Up to 80 files every 3 hours. The Free plan gets 3 uploads a day.</li>
+          <li>File storage: 25GB per user.</li>
+          <li>Limits change, so check OpenAI's file FAQ if a limit matters.</li>
+          <li>Since 6 October 2026 you can upload audio for a transcript and summary. On iPhone, the camera can scan a multi-page paper document into a PDF.</li>
+          <li>Voice mode runs on GPT-Live models. Go and Plus get 3 hours a day, Pro 100 gets 15 hours, Pro 200 is unlimited. Free voice is listed as limited.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://support.claude.com/en/articles/8241126-upload-files-to-claude" target="_blank" rel="noopener">Claude, upload files</a> · <a href="https://platform.claude.com/docs/build-with-claude/vision" target="_blank" rel="noopener">Anthropic, vision limits</a> · <a href="https://support.claude.com/en/articles/11101966-use-voice-mode" target="_blank" rel="noopener">Claude, voice mode</a> · <a href="https://help-lb.openai.com/en/articles/8555545-file-uploads-faq" target="_blank" rel="noopener">OpenAI, file uploads FAQ</a> · <a href="https://help-lb.openai.com/en/articles/20001274" target="_blank" rel="noopener">OpenAI, voice mode FAQ</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes</a> · <a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">ChatGPT pricing</a></p>
+  </section>
+
+  <!-- 4. CHECKING ANSWERS -->
+  <section class="topic" id="checking">
+    <header><p class="eyebrow">Topic 4 · Trust</p><h2>Checking answers</h2></header>
+    <p class="first"><b>Do this first</b>Pick one fact from your last AI answer that you were going to rely on. Find it on an official website before you use it.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3>
+        <p><b>Hallucination</b> is the name for a confident, plausible answer that is false. OpenAI defines it as "plausible but false statements generated by language models." In its own example, a chatbot gave three different wrong titles for a researcher's dissertation, each one stated with confidence.</p>
+        <p>Why it happens: the model learns to predict likely text. Rare facts, like a person's birthday or a specific rule number, don't follow a pattern it can learn. OpenAI also explains that tests used to grade models have rewarded guessing over saying "I don't know." So a model can produce something that sounds right in the place where a real fact should go.</p>
+        <p><b>Sycophancy</b> is the habit of telling you what you want to hear. Anthropic researchers found that five leading assistants did it consistently, and called it "a general behavior" of models trained on human ratings. In April 2025, OpenAI rolled back a ChatGPT update that had become too agreeable: it validated doubts, stoked anger and encouraged impulsive actions.</p>
+      </div>
+      <div><h3>How to: the 4-step check</h3>
+        <ol>
+          <li><b>Spot the load-bearing facts.</b> Names, numbers, dates, quotes, laws, doses, prices, deadlines. Those are what you check.</li>
+          <li><b>Ask for sources.</b> "Which sources support each of those facts? Give me links." Turn on web search if the answer depends on anything recent.</li>
+          <li><b>Open the links.</b> Confirm the page exists, says what the AI claims, and is current. A link that looks right can still lead nowhere or say something else.</li>
+          <li><b>Confirm with a human expert</b> when it matters: a doctor, pharmacist, lawyer, accountant or the company itself. Treat AI answers on health, law and money as a starting point.</li>
+        </ol>
+        <p>Then test for flattery: ask the question the other way round. "Is this a good idea?" and "What are the strongest reasons this is a bad idea?" should both get honest answers.</p>
+      </div>
+      <div class="wide watch"><h3>What can go wrong</h3>
+        <ul>
+          <li>The answer sounds sure. Confidence tells you nothing about accuracy.</li>
+          <li>You lead the witness. "This contract is fine, right?" invites a yes. Ask "What in this contract could cost me money?"</li>
+          <li>You push back and it caves. If it changes a fact the moment you object, neither version is checked. Look it up.</li>
+          <li>It invents quotes or citations. Anthropic's help page warns Claude can invent quotes. Never paste a reference you haven't opened.</li>
+          <li>In a health emergency, don't wait for a chat. In the US, call 911. For a possible poisoning or wrong medicine dose, call Poison Control at 1-800-222-1222 (free, 24/7). In an emotional crisis, call or text 988.</li>
+        </ul>
+      </div>
+    </div>
+
+    <aside class="bertie">
+      <span class="face" aria-hidden="true"></span>
+      <div><p><b>Bertie checks his sources</b>Bertie asked for three studies to back up a point, copied them into his report, and felt very scholarly. Then a reader tried to open them. One was real, one was about something else, and one had never existed. Bertie is still looking for it.</p><p class="lesson">A citation is a claim too. Click every link before you trust it.</p></div>
+    </aside>
+
+    <div class="prompts">
+      <div class="prompt"><h4>Ask for sources</h4><blockquote>For each factual claim in your answer, give me the source and a link. If you aren't sure of a source, say "not sure" instead of guessing.</blockquote></div>
+      <div class="prompt"><h4>Invite disagreement</h4><blockquote>I'm leaning toward this plan. Argue against it as strongly and honestly as you can. Don't soften it to make me feel better.</blockquote></div>
+      <div class="prompt"><h4>Rate your certainty</h4><blockquote>Go back through your answer and mark each point as "confident," "likely" or "guess." Tell me which ones I should check first.</blockquote></div>
+      <div class="prompt"><h4>Quote, then answer</h4><blockquote>Using only the PDF I attached, quote the exact sentences that answer my question. If the document doesn't say, tell me it doesn't say.</blockquote></div>
+    </div>
+
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b>
+        <ul>
+          <li>Anthropic's help page says Claude can sound confident and be wrong, and is not "a singular source of truth." It asks you to check important advice.</li>
+          <li>When Claude uses web search, it shows citations. Click them.</li>
+          <li>Use the thumbs-down button to report a wrong answer.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b>
+        <ul>
+          <li>OpenAI's own research explains why models guess and proposes penalizing confident errors more than honest uncertainty.</li>
+          <li>OpenAI published a post-mortem on its 2025 sycophancy problem. One cause was an extra reward signal from thumbs-up and thumbs-down feedback. Its offline tests had looked fine before release.</li>
+          <li>When ChatGPT uses memory, a <b>Sources</b> section under a reply shows which memories or past chats shaped the answer. Check it if a reply seems oddly personal.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://openai.com/index/why-language-models-hallucinate/" target="_blank" rel="noopener">OpenAI, why language models hallucinate</a> · <a href="https://support.claude.com/en/articles/8525154" target="_blank" rel="noopener">Claude, accuracy and hallucinations</a> · <a href="https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models" target="_blank" rel="noopener">Anthropic, sycophancy research</a> · <a href="https://openai.com/index/expanding-on-sycophancy/" target="_blank" rel="noopener">OpenAI, expanding on sycophancy</a> · <a href="https://help-lb.openai.com/en/articles/8590148" target="_blank" rel="noopener">OpenAI, memory FAQ</a> · <a href="https://www.poison.org/how-to-get-help-from-poison-control" target="_blank" rel="noopener">Poison Control</a> · <a href="https://www.fcc.gov/988-suicide-and-crisis-lifeline" target="_blank" rel="noopener">988 Lifeline</a></p>
+  </section>
+
+  <!-- 5. MODELS AND THINKING -->
+  <section class="topic" id="models">
+    <header><p class="eyebrow">Topic 5 · Settings</p><h2>Picking a model and how hard it thinks</h2></header>
+    <p class="first"><b>Do this first</b>Open the model menu in your app and read the names. Know which one you're using before you judge the answer.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3>
+        <p>Each planet offers several models. Larger models handle harder reasoning. Smaller ones answer faster. Both planets also let you set how much the model "thinks" before it answers. A thinking model works through the problem internally first, which takes longer and uses more of your allowance.</p>
+      </div>
+      <div><h3>How to choose</h3>
+        <ul>
+          <li><b>Fast / low effort:</b> quick facts, rewording a sentence, a short email, a recipe, a translation of a menu.</li>
+          <li><b>More thinking:</b> comparing options with many factors, a budget with real numbers, a tricky letter with legal stakes, a multi-step plan, math, reviewing a long document.</li>
+          <li>Start fast. If the answer is shallow or misses steps, run the same prompt again with more thinking.</li>
+        </ul>
+      </div>
+      <div class="wide watch"><h3>What can go wrong</h3>
+        <ul>
+          <li>More thinking costs more of your limit. Using maximum effort for every small question can run you out early.</li>
+          <li>A thinking model still hallucinates. Check its facts the same way.</li>
+          <li>You may be switched. On ChatGPT, when you hit a limit, the app may move you to a different model. Check the model name if quality suddenly changes.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b>
+        <ul>
+          <li><b>Switch models:</b> click the model name next to the send button and pick one. "More models" shows older versions.</li>
+          <li><b>Current line:</b> Fable 5.2 (top tier, hardest reasoning), Opus 5.5 (Anthropic's recommended default for most work), Sonnet 5.5 (balance of speed and intelligence), Haiku 5.5 (fastest).</li>
+          <li><b>By plan:</b> Free has Sonnet and Haiku only. Pro adds Opus. Pro reaches Fable only through paid usage credits. Max can use Fable for up to 50% of its weekly limits.</li>
+          <li><b>Effort:</b> an Effort menu offers Low, Medium, High, Extra high and Max. Thinking is always on for the newest models. Lower effort makes Claude think less.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b>
+        <ul>
+          <li><b>Model selector:</b> the menu now shows "GPT-6." A Thinking slider offers Instant, Medium, High, Extra High and Pro.</li>
+          <li><b>What powers it:</b> GPT-6 Sol runs Instant through Extra High. "Pro" uses GPT-6 Pro, powered by GPT-6 Astra, and it has weekly limits even on the Pro plan.</li>
+          <li><b>Limits:</b> Medium and higher settings draw on your Thinking limits.</li>
+          <li><b>You choose:</b> since 14 September 2026, Plus and Pro no longer switch from Instant to Thinking on their own.</li>
+          <li><b>Free and Go:</b> a Luna model. OpenAI's pages disagree on the version (GPT-6 Luna or GPT-5.6 Luna). The pricing page also lists GPT-5 Thinking Mini on Free.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://support.claude.com/en/articles/8664678-how-can-i-change-the-model-version-that-i-m-chatting-with" target="_blank" rel="noopener">Claude, change model</a> · <a href="https://platform.claude.com/docs/en/models/overview" target="_blank" rel="noopener">Anthropic, models overview</a> · <a href="https://claude.com/pricing" target="_blank" rel="noopener">Claude pricing</a> · <a href="https://help-lb.openai.com/en/articles/11909943" target="_blank" rel="noopener">OpenAI, GPT-6 in ChatGPT</a> · <a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">ChatGPT pricing</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes</a></p>
+  </section>
+
+  <!-- 6. WEB SEARCH AND CUTOFF -->
+  <section class="topic" id="search">
+    <header><p class="eyebrow">Topic 6 · Freshness</p><h2>Web search and the knowledge cutoff</h2></header>
+    <p class="first"><b>Do this first</b>For anything that changes (prices, opening hours, laws, schedules, news, product models), start your prompt with "Search the web and cite your sources."</p>
+    <div class="fmt">
+      <div><h3>What it is</h3>
+        <p>A model learns from text collected up to a date called its <b>knowledge cutoff</b>. After that date it knows nothing on its own. Anthropic adds a subtlety: recent events are thin in the training data, so the "reliable" cutoff comes earlier than the last date of data.</p>
+        <p><b>Web search</b> lets the AI look things up now and answer with links. Anthropic describes it as finding information "beyond the knowledge cutoff, with cited sources."</p>
+        <p><b>Deep research</b> is a heavier mode. It runs many searches in a row and writes a longer report. Use it for questions where you'd otherwise open twenty browser tabs.</p>
+      </div>
+      <div><h3>How to</h3>
+        <ol>
+          <li>Ask yourself: could the answer have changed this year? If yes, ask for a search.</li>
+          <li>Name trusted sources: "Use the manufacturer's site and government pages."</li>
+          <li>Ask for the date of each source. Old pages give old answers.</li>
+          <li>Open the two or three links that matter most and read them yourself.</li>
+          <li>Save deep research for big questions, since it uses more of your allowance and takes longer.</li>
+        </ol>
+      </div>
+      <div class="wide watch"><h3>What can go wrong</h3>
+        <ul>
+          <li>Without search, the AI may describe last year's product, price or rule as if it were current.</li>
+          <li>Search results can be wrong too. A summary is only as good as the pages behind it.</li>
+          <li>Web pages can contain hidden instructions written to trick an AI ("prompt injection"). OpenAI describes these as text that can "trick AIs into doing something you did not ask for." If a search answer suddenly pushes a product or a link you didn't ask about, be suspicious.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b>
+        <ul>
+          <li><b>Knowledge cutoff:</b> current Claude models list a reliable cutoff of June 2026.</li>
+          <li><b>Web search:</b> included on Free and all paid plans.</li>
+          <li><b>Research</b> (deep research): paid plans only. Choose "+" then Research. Web search must be on. It can also search connected Gmail, Calendar and Docs. On mobile it searches only the web.</li>
+          <li>The claude.ai app gives Claude today's date through its system prompt, so it knows what "now" is even though its knowledge stops earlier.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b>
+        <ul>
+          <li><b>Knowledge cutoff:</b> OpenAI lists 30 April 2026 for GPT-6 Astra and GPT-6.1 Sol, and 18 May 2026 for GPT-6 Luna.</li>
+          <li><b>Web search:</b> built into ChatGPT.</li>
+          <li><b>Deep research:</b> limited on Free, expanded on Plus, maximum on Pro. Exact quotas weren't verifiable this round.</li>
+          <li><b>Lockdown Mode</b> (from June 2026) can restrict live browsing to reduce risks such as prompt injection. If search seems not to work, check whether it's on.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://platform.claude.com/docs/en/models/overview" target="_blank" rel="noopener">Anthropic, models and cutoffs</a> · <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noopener">Anthropic, tools and web search</a> · <a href="https://platform.claude.com/docs/en/release-notes/system-prompts/overview" target="_blank" rel="noopener">Anthropic, system prompts</a> · <a href="https://support.claude.com/en/articles/11088861-use-research-on-claude" target="_blank" rel="noopener">Claude, Research</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank" rel="noopener">OpenAI, models</a> · <a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">ChatGPT pricing</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes</a> · <a href="https://openai.com/index/prompt-injections/" target="_blank" rel="noopener">OpenAI, prompt injections</a></p>
+  </section>
+
+  <!-- 7. MEMORY -->
+  <section class="topic" id="memory">
+    <header><p class="eyebrow">Topic 7 · Memory</p><h2>Memory basics</h2></header>
+    <p class="first"><b>Do this first</b>Open your memory settings today and read what the AI has saved about you. Delete anything wrong or anything you'd rather it didn't keep.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3>
+        <p>Inside one chat, the AI sees the whole conversation. Across chats, it starts fresh unless <b>memory</b> is on. With memory, the app saves useful details (your job, your projects, your preferences) and brings them into future chats.</p>
+        <p>Memory saves typing. It can also carry an old mistake or a sensitive detail into chats where you didn't want it.</p>
+        <p>A <b>temporary</b> or <b>incognito</b> chat is a one-off conversation that doesn't feed memory. Use it for sensitive questions or for a "clean" answer that isn't shaped by what the AI knows about you.</p>
+      </div>
+      <div><h3>How to</h3>
+        <ol>
+          <li>Find the memory page (paths below) and read it.</li>
+          <li>Correct or delete wrong items. You can also say in a chat: "Forget that I live in Denver."</li>
+          <li>Tell it what to remember: "Remember that I'm vegetarian."</li>
+          <li>Use a temporary or incognito chat for anything you don't want saved.</li>
+          <li>When you delete a chat, check memory too. On both planets, deleting a chat does not delete the memories made from it.</li>
+        </ol>
+      </div>
+      <div class="wide watch"><h3>What can go wrong</h3>
+        <ul>
+          <li>An old fact sticks. You moved, changed jobs or stopped a diet, and the AI keeps using the old version.</li>
+          <li>You assume deleting a chat erased everything. It didn't remove memories. Delete those separately.</li>
+          <li>Someone else uses your account and sees answers shaped by your memory.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b>
+        <ul>
+          <li><b>Default:</b> memory is on for Free, Pro, Max and Ultra, on web, desktop and mobile. Claude saves memory as topics while you chat.</li>
+          <li><b>See and edit:</b> Settings &gt; Your Claude &gt; "Manage" next to "Your memory."</li>
+          <li><b>Sensitive topics</b> such as health, politics and religion aren't saved unless you opt in. ID and financial account numbers are never saved to memory.</li>
+          <li><b>Turn off:</b> the "Generate memory from chats" toggle, "Pause memory," or "Reset memory" (permanent, including project memory).</li>
+          <li><b>One chat only:</b> click "+" and turn off Memory before your first message.</li>
+          <li><b>Incognito:</b> click the ghost icon in a new chat. It isn't saved to history or memory, isn't searchable, and is never used for training.</li>
+          <li><b>Past chats:</b> on Pro and up, Claude can search and reference earlier chats.</li>
+          <li><b>Standing instructions</b> for every chat: Settings &gt; Your Claude &gt; "Instructions" (called "Instructions for Claude" in older layouts).</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b>
+        <ul>
+          <li><b>See and edit:</b> Settings &gt; Personalization &gt; Memory. You'll find a memory summary you can correct, delete items from or mark "Don't mention this again," plus saved memories, reference chat history and an off switch.</li>
+          <li><b>Sources</b> under a reply show which memories or chats shaped it.</li>
+          <li><b>Turning off:</b> turning off saved memories also turns off chat-history referencing. Turning off reference chat history deletes what was remembered from chats within 30 days.</li>
+          <li><b>Temporary chats</b> don't create or update memories and can be set to "Unpersonalized." OpenAI deletes them within 30 days and doesn't use them for training.</li>
+          <li><b>By plan:</b> Free has limited memory, Go longer, Plus expanded, Pro maximum.</li>
+          <li><b>Locked chats</b> (from October 2026) hide chosen chats behind a PIN or device unlock.</li>
+          <li><b>Standing instructions:</b> custom instructions and personality options live under Personalization. Their current names weren't verifiable this round.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://support.claude.com/en/articles/11817273" target="_blank" rel="noopener">Claude, memory</a> · <a href="https://support.claude.com/en/articles/10185728-understanding-claude-s-personalization-features" target="_blank" rel="noopener">Claude, personalization</a> · <a href="https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data" target="_blank" rel="noopener">Claude, data retention</a> · <a href="https://help-lb.openai.com/en/articles/8590148" target="_blank" rel="noopener">OpenAI, memory FAQ</a> · <a href="https://help.openai.com/en/articles/7730893-data-controls-faq" target="_blank" rel="noopener">OpenAI, data controls FAQ</a> · <a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">ChatGPT pricing</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes</a></p>
+  </section>
+
+  <!-- 8. PROJECTS -->
+  <section class="topic" id="projects">
+    <header><p class="eyebrow">Topic 8 · Organizing</p><h2>Projects</h2></header>
+    <p class="first"><b>Do this first</b>Think of one ongoing task you keep re-explaining (a house renovation, a job search, a class). That is your first project.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3>
+        <p>A project is a workspace that groups related chats with their own files and instructions. You upload the background once (a floor plan, your resume, a syllabus) and write standing instructions ("Assume a budget of $8,000"). Every chat inside the project starts with that context.</p>
+      </div>
+      <div><h3>When to use one</h3>
+        <ul>
+          <li>You return to the same topic over weeks.</li>
+          <li>You keep pasting the same documents.</li>
+          <li>You want separate rules for separate parts of life: formal for work, casual for hobbies.</li>
+          <li>You want memory from one area kept apart from another.</li>
+        </ul>
+        <p>For a one-off question, a normal chat is simpler.</p>
+      </div>
+      <div class="wide watch"><h3>What can go wrong</h3>
+        <ul>
+          <li>Old files go stale. If your budget changed, update the project file or the AI will keep using the old number.</li>
+          <li>Too many files dilute attention. Upload what matters for this project, not everything you own.</li>
+          <li>Instructions in the project apply to every chat in it. A rule you forgot about can explain an odd answer.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b>
+        <ul>
+          <li>Projects hold their own chats, knowledge files and custom instructions.</li>
+          <li><b>Free:</b> up to 5 projects. <b>Paid plans:</b> retrieval that expands file capacity "up to 10x."</li>
+          <li>Project files can be up to 30MB each.</li>
+          <li>Each project has its own memory. A project sees its own memory plus your account memory, never another project's. The "Use account memory" toggle keeps a project fully separate.</li>
+          <li>Sharing a project with others is for Team and Enterprise plans.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b>
+        <ul>
+          <li>The pricing page lists projects from Plus up.</li>
+          <li>Projects came to the desktop app in July 2026.</li>
+          <li>Files per project: 20 on Plus, 40 on Pro and Business, according to OpenAI's file FAQ.</li>
+          <li>Since August 2026 you can switch an existing project between default memory and project-only memory.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://support.claude.com/en/articles/9517075-what-are-projects" target="_blank" rel="noopener">Claude, projects</a> · <a href="https://support.claude.com/en/articles/11817273" target="_blank" rel="noopener">Claude, memory</a> · <a href="https://support.claude.com/en/articles/8241126-upload-files-to-claude" target="_blank" rel="noopener">Claude, uploads</a> · <a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">ChatGPT pricing</a> · <a href="https://help-lb.openai.com/en/articles/8555545-file-uploads-faq" target="_blank" rel="noopener">OpenAI, file uploads FAQ</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes</a></p>
+  </section>
+
+  <!-- 9. PRIVACY -->
+  <section class="topic" id="privacy">
+    <header><p class="eyebrow">Topic 9 · Your data</p><h2>Privacy settings, deleting and exporting</h2></header>
+    <p class="first"><b>Do this first</b>Open your privacy settings and decide, on purpose, whether your chats may be used to train future models.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3>
+        <p>Three questions decide what happens to what you type:</p>
+        <ul>
+          <li><b>Training:</b> may the company use your chats to improve its models?</li>
+          <li><b>Retention:</b> how long does it keep your chats, including deleted ones?</li>
+          <li><b>Control:</b> can you export or delete your data and your account?</li>
+        </ul>
+        <p>On both planets, consumer accounts have a training switch. Work plans (Team, Business, Enterprise) follow different rules set by the employer.</p>
+      </div>
+      <div><h3>How to</h3>
+        <ol>
+          <li>Set the training switch the way you want it (paths below). Turning it off affects future chats only.</li>
+          <li>Delete chats you don't need, especially ones with personal details.</li>
+          <li>Check memory separately (Topic 7).</li>
+          <li>Review signed-in devices and sign out of ones you don't recognize.</li>
+          <li>Before deleting your account, cancel any paid plan and export your data.</li>
+        </ol>
+      </div>
+      <div class="wide watch"><h3>What can go wrong</h3>
+        <ul>
+          <li>You assume a default. Defaults change. Look at the switch yourself.</li>
+          <li>You archive a chat and think it's gone. On ChatGPT, archiving does not delete.</li>
+          <li>You delete your account without exporting. Deletion is permanent on both planets.</li>
+          <li>You get an email "from" the AI company asking you to log in. Go to the site yourself. Don't click the link.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b>
+        <ul>
+          <li><b>Training:</b> on Free, Pro and Max, use the "Help Improve our AI models" toggle under Settings &gt; Privacy (<code>claude.ai/settings/data-privacy-controls</code>). Anthropic says users choose. Earlier press reports suggested the switch came pre-set to on, so check yours.</li>
+          <li><b>Retention:</b> with training on, data can be kept up to 5 years (de-identified). With training off, 30 days. Thumbs-up/down feedback: 5 years. Chats flagged for policy violations: up to 2 years.</li>
+          <li><b>Delete a chat:</b> "⋮" &gt; Delete. Bulk select works on web and Android. Deleted chats leave your history right away and are removed from back-end systems within 30 days.</li>
+          <li><b>Incognito chats</b> are never used for training.</li>
+          <li><b>Delete account:</b> Settings &gt; Account &gt; "Delete account." Permanent. Cancel a paid plan first. Export your data first: Settings &gt; Privacy &gt; "Export data," on web or desktop. Claude emails you a download link.</li>
+          <li><b>Devices:</b> Settings &gt; Account &gt; "Active sessions" (newer layout: "Where you're logged in").</li>
+          <li><b>Sign-in:</b> Claude uses an email link or code, or Google. There's no Claude password, so a strong password and two-step login on your email protect your Claude account.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b>
+        <ul>
+          <li><b>Training:</b> Settings &gt; Data Controls &gt; turn off "Improve the model for everyone." This applies to your whole account.</li>
+          <li><b>Business, Enterprise and Edu</b> data isn't used for training by default.</li>
+          <li><b>Temporary chats</b> are deleted within 30 days and aren't used for training.</li>
+          <li><b>Deleted chats</b> leave your history right away and are removed from OpenAI's systems within 30 days. Archived chats are not deleted.</li>
+          <li><b>Export:</b> request it from Data Controls. OpenAI emails it to you.</li>
+          <li><b>Delete account:</b> also in Data Controls. It can't be undone.</li>
+          <li><b>Privacy Center</b> (from September 2026) gathers the privacy controls in one place.</li>
+          <li><b>Devices and login:</b> Settings &gt; Security shows active sessions and "Log out of all devices." Turn on multi-factor authentication there too.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings" target="_blank" rel="noopener">Claude, model improvement setting</a> · <a href="https://anthropic.com/news/updates-to-our-consumer-terms" target="_blank" rel="noopener">Anthropic, consumer terms update</a> · <a href="https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data" target="_blank" rel="noopener">Claude, data retention</a> · <a href="https://support.claude.com/en/articles/8230524-delete-or-rename-a-conversation" target="_blank" rel="noopener">Claude, delete a chat</a> · <a href="https://support.claude.com/en/articles/9028421-delete-your-claude-account" target="_blank" rel="noopener">Claude, delete account</a> · <a href="https://support.claude.com/en/articles/13124001-managing-your-active-sessions" target="_blank" rel="noopener">Claude, active sessions</a> · <a href="https://support.claude.com/en/articles/13189465-log-in-to-your-claude-account" target="_blank" rel="noopener">Claude, logging in</a> · <a href="https://help.openai.com/en/articles/7730893-data-controls-faq" target="_blank" rel="noopener">OpenAI, data controls FAQ</a> · <a href="https://help-lb.openai.com/en/articles/8590148" target="_blank" rel="noopener">OpenAI, memory FAQ</a> · <a href="https://support.claude.com/en/articles/9450526-export-your-claude-data" target="_blank" rel="noopener">Claude, export data</a> · <a href="https://help-lb.openai.com/en/articles/8809935-how-to-delete-and-archive-chats-in-chatgpt" target="_blank" rel="noopener">OpenAI, delete and archive chats</a> · <a href="https://techcrunch.com/2026/08/15/how-to-tell-if-your-ai-platforms-accounts-have-been-hacked" target="_blank" rel="noopener">TechCrunch, account security</a> · <a href="https://help-lb.openai.com/en/articles/7967234-enabling-multi-factor-authentication-mfa-with-openai" target="_blank" rel="noopener">OpenAI, MFA</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes</a></p>
+  </section>
+
+  <!-- 10. EVERYDAY RECIPES -->
+  <section class="topic" id="recipes">
+    <header><p class="eyebrow">Topic 10 · Practice</p><h2>Everyday recipes</h2></header>
+    <p class="first"><b>Do this first</b>Copy one card below, replace the words in [brackets] with your real details, and send it.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3>
+        <p>Each card uses the recipe from Topic 1: a goal, the context, the reader, a format and a length. They work the same way on both planets. Treat them as starting points and add your own facts.</p>
+      </div>
+      <div><h3>How to</h3>
+        <ol>
+          <li>Fill in every bracket. Empty brackets give generic answers.</li>
+          <li>Add anything special about your situation.</li>
+          <li>Follow up with one change at a time (Topic 2).</li>
+          <li>Check names, numbers and dates before you send or act (Topic 4).</li>
+        </ol>
+      </div>
+      <div class="wide watch"><h3>What can go wrong</h3>
+        <ul>
+          <li>Leave out account numbers, full addresses and ID numbers. "[account number]" is enough for drafting.</li>
+          <li>Health, legal and money cards prepare you for a professional. They don't replace one.</li>
+          <li>For prices, products, laws or opening hours, ask it to search the web (Topic 6).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="prompts">
+      <div class="prompt"><h4>Complaint letter</h4><blockquote>Help me write a complaint letter to [company] about [problem]. Facts: I bought [item] on [date] for [price]. It [what went wrong]. I contacted them on [date] and [what they said]. I want [refund / replacement / repair] within 14 days. Tone: firm and polite. Under 250 words, with a clear subject line.</blockquote></div>
+      <div class="prompt"><h4>Letter to a landlord</h4><blockquote>Write a short letter to my landlord. The [heater / sink / lock] has been broken since [date]. I reported it by [text / phone] on [date] and nothing has happened. I'd like it repaired by [date] and want to arrange a time for access. Polite, factual, under 180 words. Leave a space for my signature.</blockquote></div>
+      <div class="prompt"><h4>Reply to a tricky email</h4><blockquote>Below is an email from my manager asking me to take on [task] this week. I already have [current workload]. Draft a reply that says yes to part of it, explains what would have to slip, and suggests [alternative]. Friendly and professional, 4 to 6 sentences.
+
+"""
+[paste email]
+"""</blockquote></div>
+      <div class="prompt"><h4>Cook from the fridge</h4><blockquote>I have [list what's in the fridge and cupboard]. Suggest 3 dinners for [number] people that use mostly these. Constraints: [allergies / vegetarian], [time] minutes, [equipment]. For each: name, ingredients I'm missing, and numbered steps.</blockquote></div>
+      <div class="prompt"><h4>Translate with care</h4><blockquote>Translate this message into [language] for my [neighbor / child's teacher]. Keep it polite and natural, the way a native speaker would write it. Then give a word-for-word back-translation into English so I can check the meaning.
+
+"""
+[paste message]
+"""</blockquote></div>
+      <div class="prompt"><h4>Learn a skill in 4 weeks</h4><blockquote>I want to learn [skill, for example basic bread baking]. I'm a complete beginner and have [time] per week. Make a 4-week plan with one small goal per week, what to practice, and how I'll know I'm improving. Ask me 3 questions first about my setup.</blockquote></div>
+      <div class="prompt"><h4>Fix it at home</h4><blockquote>[Attach photo.] This is my [item, for example bathroom tap]. It [describe problem, for example drips when closed]. I have basic tools and no experience. What are the likely causes, from most to least likely? For the most likely one, give safe step-by-step instructions, tools needed, and the point at which I should call a professional.</blockquote></div>
+      <div class="prompt"><h4>Car warning light</h4><blockquote>[Attach photo of dashboard.] My [year, make, model] shows this light. It came on [when, for example after starting this morning]. The car [drives normally / makes a noise]. What does the light usually mean, is it safe to keep driving, and what should I tell the mechanic? Check my car's manual online if you can, and cite it.</blockquote></div>
+      <div class="prompt"><h4>Compare products</h4><blockquote>Search the web and compare [product A], [product B] and [product C] for [my use, for example a small apartment with pets]. Make a table: price, key specs, main complaints in reviews, warranty. Then recommend one for my use and say what would change your mind. Cite each source with its date.</blockquote></div>
+      <div class="prompt"><h4>Summarize a long document</h4><blockquote>[Attach PDF.] This is my [insurance policy / lease / contract]. Summarize it in 10 bullet points for someone with no legal background. Then list: every deadline, every fee, and anything that lets them cancel or charge me more. Quote the exact sentence for each item.</blockquote></div>
+      <div class="prompt"><h4>Plan a trip</h4><blockquote>Plan [number] days in [place] for [who, for example two adults and a 7-year-old] in [month]. Budget about [amount] excluding flights. We like [interests] and dislike [things to avoid]. One day at a time, morning / afternoon / evening, with travel time between stops. Search for current opening hours and mark anything I should book ahead.</blockquote></div>
+      <div class="prompt"><h4>Write a toast</h4><blockquote>Write a 90-second toast for my [brother's wedding]. I'm the [relationship]. Three true details: [detail 1], [detail 2], [detail 3]. Tone: warm, a little funny, no inside jokes others won't get, no mention of exes. End with a line that invites everyone to raise a glass.</blockquote></div>
+      <div class="prompt"><h4>Prepare for a doctor visit</h4><blockquote>I have a [10-minute] appointment about [symptom] that started [when]. Don't diagnose me. Help me prepare: a short timeline I can read out, the questions I should ask the doctor, and what information they will probably want (medicines, history). One page, bullet points.</blockquote></div>
+      <div class="prompt"><h4>Understand test results words</h4><blockquote>My doctor's portal uses these terms: [terms]. Explain what each term means in plain words. Don't tell me what my results mean for me. Give me 3 questions to ask my doctor about them.</blockquote></div>
+      <div class="prompt"><h4>Monthly budget</h4><blockquote>Help me build a monthly budget. Take-home pay: [amount]. Fixed costs: [rent, utilities, phone, insurance with amounts]. Debts: [amounts and minimum payments]. Goal: save [amount] a month for [goal]. Make a table with categories and amounts, show what's left, and suggest 3 places to cut with realistic numbers. Show your math.</blockquote></div>
+      <div class="prompt"><h4>Explain a bill</h4><blockquote>[Attach photo of the bill with account number covered.] This is my [electric / phone / hospital] bill. Explain each line in plain English. Point out anything that looks unusual compared with a typical bill, and draft 3 questions to ask the company when I call.</blockquote></div>
+      <div class="prompt"><h4>Job application cover letter</h4><blockquote>Write a cover letter for [job title] at [company]. Use only facts from my resume below. Match the 3 most important requirements in the posting with a specific example from my experience. Under 300 words. Plain, confident, no clichés like "passionate team player."
+
+"""
+[paste resume]
+"""
+"""
+[paste posting]
+"""</blockquote></div>
+      <div class="prompt"><h4>Practice a job interview</h4><blockquote>Act as an interviewer for a [job title] role. Ask me one question at a time, wait for my answer, then give short feedback: what worked, what to tighten. After 6 questions, summarize my two strongest and two weakest answers.</blockquote></div>
+      <div class="prompt"><h4>Help with homework (as a tutor)</h4><blockquote>I'm helping my [age]-year-old with [topic]. Explain it to me first so I understand, then give me 3 practice questions at their level with answers on a separate line, and one hint for each that doesn't give the answer away.</blockquote></div>
+      <div class="prompt"><h4>Make a hard decision clearer</h4><blockquote>I'm deciding between [option A] and [option B]. What matters to me: [list]. Constraints: [money, time, family]. Lay out the pros and cons of each against what matters to me, then tell me what information I'm missing. Don't decide for me.</blockquote></div>
+      <div class="prompt"><h4>Spot a scam message</h4><blockquote>I got this message. Don't click anything in it. List the warning signs of a scam you see, rate how likely it is to be a scam, and tell me how to contact the real company safely.
+
+"""
+[paste message text only]
+"""</blockquote></div>
+      <div class="prompt"><h4>Plan a week of chores</h4><blockquote>Our household is [who lives here]. Make a fair weekly chore chart for [list of chores]. [Name] can't do [task] because [reason]. Put it in a table by day, about [minutes] per person per day, and rotate the unpleasant jobs.</blockquote></div>
+      <div class="prompt"><h4>Shorten and tidy</h4><blockquote>Rewrite the text below so it's half as long and easy to read on a phone. Keep every fact and date. Use short paragraphs. Don't add anything new.
+
+"""
+[paste text]
+"""</blockquote></div>
+      <div class="prompt"><h4>Prepare for a hard call</h4><blockquote>I need to call [my bank / insurer / airline] about [issue]. Write a short script: how to open, the 3 facts I must state, what to ask for, and polite replies if they say no. Add a list of things to write down during the call (name, reference number, date).</blockquote></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/be-clear-and-direct" target="_blank" rel="noopener">Anthropic, prompting best practices</a> · <a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api" target="_blank" rel="noopener">OpenAI, prompt engineering</a> · <a href="https://consumer.ftc.gov/consumer-alerts/2024/12/phishing-scams-can-be-hard-spot" target="_blank" rel="noopener">FTC, phishing</a> · <a href="https://openai.com/index/why-language-models-hallucinate/" target="_blank" rel="noopener">OpenAI, hallucinations</a></p>
+  </section>
+
+  <!-- 11. USAGE LIMITS -->
+  <section class="topic" id="limits">
+    <header><p class="eyebrow">Topic 11 · Allowance</p><h2>Usage limits: "You've hit your limit"</h2></header>
+    <p class="first"><b>Do this first</b>Find where your app shows how much you've used, so a limit message doesn't surprise you in the middle of a task.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3>
+        <p>Running these models costs the companies real computing power, so every plan has limits. When you reach one, the app pauses you, offers a smaller model, or suggests an upgrade. The limit resets after a set time.</p>
+        <p>Heavier use draws down your allowance faster: thinking modes, big files, long chats, voice and deep research.</p>
+      </div>
+      <div><h3>How to stretch it</h3>
+        <ol>
+          <li>Write a complete prompt the first time (Topic 1). Fewer rounds of "no, I meant..." means fewer messages.</li>
+          <li>Start a new chat for a new topic, so the AI isn't rereading a long history.</li>
+          <li>Use fast settings for simple tasks and save heavy thinking for hard ones.</li>
+          <li>Upload only the pages you need.</li>
+          <li>If you hit a wall, write down where you were, and come back after the reset.</li>
+        </ol>
+      </div>
+      <div class="wide watch"><h3>What can go wrong</h3>
+        <ul>
+          <li>You get cut off halfway through something urgent. For deadline work, keep your own copy of drafts outside the chat.</li>
+          <li>The app quietly moves you to another model. The tone or quality changes and you don't know why. Check the model name.</li>
+          <li>You upgrade on impulse. Look at the pricing page and your actual use first. Companies "may adjust limits," in Anthropic's words.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b>
+        <ul>
+          <li><b>Free:</b> "limited usage" that resets every 5 hours and every week.</li>
+          <li><b>Paid plans</b> have two limits: a 5-hour session that starts with your first message, and a weekly limit.</li>
+          <li><b>Check it:</b> Settings &gt; Usage.</li>
+          <li><b>One pool:</b> claude.ai, Claude Code and the desktop app share the same allowance. Voice mode and automatic summarizing of long chats count toward it.</li>
+          <li><b>When you hit it:</b> wait for the reset, upgrade, or continue with paid usage credits.</li>
+          <li><b>Plans:</b> Pro $20 a month ($17 billed annually). Max $100, "5x Pro usage." Ultra $200, "10x Pro usage" per week with no 5-hour limit for verified accounts.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b>
+        <ul>
+          <li><b>Free:</b> "Unlimited text chats subject to abuse guardrails." Uploads, images, voice, deep research, memory and context are limited. Free uploads: 3 a day.</li>
+          <li><b>Thinking:</b> Medium and higher settings draw on separate Thinking limits. When you hit a limit, ChatGPT may switch you to another model.</li>
+          <li><b>GPT-6 Pro</b> has weekly limits, even on the Pro plan.</li>
+          <li><b>Uploads:</b> up to 80 files every 3 hours.</li>
+          <li><b>Plus:</b> "Limits apply." Pro is listed as "unlimited subject to abuse guardrails," with three usage tiers.</li>
+          <li><b>Plans:</b> OpenAI announced Go at $8 a month in the US. Its release notes list Plus at $20 and Pro at $100, $200 or $500. The pricing page didn't show dollar amounts when we checked, so confirm there. Free and Go may show ads.</li>
+        </ul>
+        <p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://claude.com/pricing" target="_blank" rel="noopener">Claude pricing</a> · <a href="https://support.claude.com/en/articles/11647753-understanding-usage-and-length-limits" target="_blank" rel="noopener">Claude, usage and length limits</a> · <a href="https://support.claude.com/en/articles/11101966-use-voice-mode" target="_blank" rel="noopener">Claude, voice mode</a> · <a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">ChatGPT pricing</a> · <a href="https://help-lb.openai.com/en/articles/11909943" target="_blank" rel="noopener">OpenAI, GPT-6 in ChatGPT</a> · <a href="https://help-lb.openai.com/en/articles/8555545-file-uploads-faq" target="_blank" rel="noopener">OpenAI, file uploads FAQ</a> · <a href="https://openai.com/index/introducing-chatgpt-go" target="_blank" rel="noopener">OpenAI, introducing ChatGPT Go</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes</a></p>
+  </section>
+
+  <!-- 12. CHECKLIST -->
+  <section class="levelup" id="checklist">
+    <h2>Ready for the next level?</h2>
+    <p class="chk-title">Tick each one you've actually done</p>
+    <ul class="check">
+      <li><label><input type="checkbox" id="l2-1"><span>I wrote a prompt with a goal, context, reader, format and length.</span></label></li>
+      <li><label><input type="checkbox" id="l2-2"><span>I asked the AI to ask me questions before answering.</span></label></li>
+      <li><label><input type="checkbox" id="l2-3"><span>I edited an earlier message or started a fresh chat with a summary.</span></label></li>
+      <li><label><input type="checkbox" id="l2-4"><span>I uploaded a photo or PDF and asked it to quote what it relied on.</span></label></li>
+      <li><label><input type="checkbox" id="l2-5"><span>I checked a fact by opening the source link myself.</span></label></li>
+      <li><label><input type="checkbox" id="l2-6"><span>I asked it to argue against my idea.</span></label></li>
+      <li><label><input type="checkbox" id="l2-7"><span>I know which model I'm using and how to change the thinking level.</span></label></li>
+      <li><label><input type="checkbox" id="l2-8"><span>I used web search for something recent and checked the dates.</span></label></li>
+      <li><label><input type="checkbox" id="l2-9"><span>I read and cleaned up my saved memory.</span></label></li>
+      <li><label><input type="checkbox" id="l2-10"><span>I tried a temporary or incognito chat.</span></label></li>
+      <li><label><input type="checkbox" id="l2-11"><span>I set my training setting on purpose.</span></label></li>
+      <li><label><input type="checkbox" id="l2-12"><span>I know how to delete a chat and export my data.</span></label></li>
+      <li><label><input type="checkbox" id="l2-13"><span>I used at least three everyday recipe cards with my own details.</span></label></li>
+      <li><label><input type="checkbox" id="l2-14"><span>I know where to see my usage and what happens at the limit.</span></label></li>
+    </ul>
+  </section>
+
+  <nav class="next" aria-label="Where next">
+    <a href="level1.html"><small>Previous stage</small><span>1 · Launch pad</span></a>
+    <a href="level3.html"><small>Next stage</small><span>3 · Deep space</span></a>
+  </nav>
+
+  <footer>
+    <p><strong>Disclosure:</strong> this guide was written with Claude, which is made by Anthropic. We compare Claude and ChatGPT using each company's own help pages and pricing, and we don't pick a winner. Features and prices change often; every box says when it was checked.</p>
+    <p>Have a tip or a correction? Send it in, and corrections go at the top of the next build.</p>
+    <p class="tracking-note">This guide uses a small visit sensor to count visits and observed active time. It does not read page text or the page URL.</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+</div>
+<script defer src="visit-sensor.js"></script>
+</body>
+</html>
