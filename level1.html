@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Launch Pad · Two Planets</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="guide.css">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+<div class="wrap" id="top">
+
+  <nav class="topnav" aria-label="Guide sections">
+    <a class="brand" href="index.html"><span class="orbs" aria-hidden="true"><i></i><i></i></span><b>Two Planets</b></a>
+    <ul>
+      <li><a href="index.html">Start</a></li>
+      <li><a href="level1.html" aria-current="page">1 · Launch pad</a></li>
+      <li><a href="level2.html">2 · Low orbit</a></li>
+      <li><a href="level3.html">3 · Deep space</a></li>
+      <li><a href="level4.html">4 · Mission control</a></li>
+      <li><a class="sos" href="help.html">Something went wrong</a></li>
+    </ul>
+  </nav>
+
+  <header class="lvl-hero">
+    <div class="stage"><span class="num">Level 1</span><span class="eyebrow">Launch pad</span></div>
+    <h1>Your first trip to an AI chat</h1>
+    <p class="sub">Start here if you have never typed a word to an AI. In about an hour you will know what it is, how to open an account safely, and how to have a useful first conversation.</p>
+    <div class="who">
+      <div><b>This level is for you if</b>you have heard of ChatGPT or Claude but never tried one, or you tried once and did not know what to do next.</div>
+      <div><b>By the end you will</b>have an account, know five safety rules by heart, know what is free and what costs money, and be able to show someone else how to start.</div>
+    </div>
+    <aside class="bertie">
+      <span class="face" aria-hidden="true"></span>
+      <div><p><b>Bertie's mistake at this level</b>Bertie asked an AI when the town library opens on Sunday. It answered "10 a.m." in a very confident voice, so Bertie walked there in the rain. The library is closed on Sundays. Bertie arrived three seconds late to that realization, and also to the door.</p><p class="lesson">A confident answer is still a guess. Check anything that matters with the real source.</p></div>
+    </aside>
+  </header>
+
+  <ul class="toc" aria-label="On this page">
+    <li><a href="#what-it-is">What an AI chat is</a></li>
+    <li><a href="#good-bad">Good at, bad at</a></li>
+    <li><a href="#two-planets">Meet the two planets</a></li>
+    <li><a href="#getting-in">Getting in</a></li>
+    <li><a href="#first-chat">Your first conversation</a></li>
+    <li><a href="#safety">Five safety rules</a></li>
+    <li><a href="#free-paid">Free vs paid</a></li>
+    <li><a href="#privacy">Privacy basics</a></li>
+    <li><a href="#voice">Talking by voice</a></li>
+    <li><a href="#myths">Myth vs fact</a></li>
+    <li><a href="#teach">Teach someone you love</a></li>
+    <li><a href="#checklist">Checklist</a></li>
+  </ul>
+
+  <!-- 1. WHAT IT IS -->
+  <section class="topic" id="what-it-is">
+    <header><p class="eyebrow">The basics</p><h2>What an AI chat actually is</h2></header>
+    <p class="first"><b>Do this first</b>Think of an AI chat as a very well-read autocomplete. It guesses the next words. It does not look facts up in a book unless it has a search tool.</p>
+    <div class="lecture">
+      <p>You already use a small version of this idea. When your phone suggests the next word in a text message, it is guessing what usually comes next. An AI chat does the same thing on a giant scale. Google's teaching course describes these programs as "essentially autocomplete mechanisms" that give each possible next piece of text a probability, then pick from the likely ones.</p>
+      <h3>Where the "knowledge" comes from</h3>
+      <p>Before you ever meet it, the program is trained on a huge amount of writing: books, websites and other text. Experts call this first stage <em>pretraining</em>. The program adjusts billions of internal numbers until it gets good at predicting text. After that, the company trains it more so it follows instructions and answers politely. One method uses people who rate answers, so the program learns which answers people prefer. Anthropic, the maker of Claude, also trains with a written list of principles it calls a "constitution."</p>
+      <h3>Why it can sound sure and be wrong</h3>
+      <p>The program learns patterns. It does not learn a list of true and false facts. OpenAI, the maker of ChatGPT, explains that rare facts, such as a person's birthday, cannot be learned from patterns. When the program does not know, it may produce a smooth guess anyway. This is called a <em>hallucination</em>: an answer that sounds right and is false. In one example OpenAI gave, a chatbot confidently offered three different wrong titles for a researcher's dissertation, the long paper written for a doctorate.</p>
+      <h3>A few words you will hear</h3>
+    </div>
+    <dl class="gloss">
+      <div><dt>AI chat (chatbot)</dt><dd>An app where you type or speak to an AI and it writes back.</dd></div>
+      <div><dt>LLM</dt><dd>"Large language model." The text-prediction program inside the chat.</dd></div>
+      <div><dt>Prompt</dt><dd>What you type or say to the AI.</dd></div>
+      <div><dt>Model</dt><dd>One version of the program. Each company offers several, some faster and some smarter.</dd></div>
+      <div><dt>Hallucination</dt><dd>A confident, believable answer that is false.</dd></div>
+      <div><dt>Knowledge cutoff</dt><dd>The date after which the model has no training data.</dd></div>
+    </dl>
+    <div class="fmt">
+      <div><h3>What it is</h3><p>A computer program that writes replies by predicting likely text. It was trained on enormous amounts of writing, then trained again to follow instructions.</p><p>It has no feelings and no life experience. It can still be very useful, the way a good dictionary is useful without being a person.</p></div>
+      <div><h3>How to</h3><ol><li>Talk to it in plain sentences, as you would to a helpful stranger.</li><li>Tell it who you are and what you need. "I am 70 and new to smartphones" helps it pick the right words.</li><li>Treat every answer as a draft or a starting point.</li><li>Ask "How sure are you?" or "Where can I check this?" when it matters.</li></ol></div>
+      <div class="wide watch"><h3>What can go wrong</h3><ul><li>It can invent facts, names, quotes and sources, and say them in a calm, certain tone.</li><li>It can tell you what you want to hear. Researchers at Anthropic found that leading assistants often agreed with users even when the users were wrong.</li><li>Its training stops at a date, so it may not know recent events unless it searches the web.</li></ul></div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b><ul><li>Anthropic's help page warns that Claude can "hallucinate" and invent quotes. It says Claude is not "a singular source of truth."</li><li>You can press thumbs-down on a bad answer to report it.</li></ul><p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b><ul><li>OpenAI publishes its own explanation of why its models hallucinate. It describes hallucinations as "plausible but false statements."</li><li>OpenAI says one cause is that the tests used to grade models reward guessing over saying "I don't know."</li></ul><p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://developers.google.com/machine-learning/crash-course/llm/transformers" target="_blank" rel="noopener">Google ML crash course: LLMs</a> · <a href="https://platform.claude.com/docs/en/about-claude/glossary" target="_blank" rel="noopener">Anthropic glossary</a> · <a href="https://www.anthropic.com/news/constitutional-ai-harmlessness-from-ai-feedback" target="_blank" rel="noopener">Anthropic: Constitutional AI</a> · <a href="https://openai.com/index/why-language-models-hallucinate/" target="_blank" rel="noopener">OpenAI: Why language models hallucinate</a> · <a href="https://support.claude.com/en/articles/8525154" target="_blank" rel="noopener">Claude help: hallucinations</a> · <a href="https://www.anthropic.com/research/towards-understanding-sycophancy-in-language-models" target="_blank" rel="noopener">Anthropic: sycophancy research</a></p>
+  </section>
+
+  <!-- 2. GOOD AND BAD -->
+  <section class="topic" id="good-bad">
+    <header><p class="eyebrow">The basics</p><h2>What it is good at, and what it is bad at</h2></header>
+    <p class="first"><b>Do this first</b>Use it for jobs where you can judge the result yourself: a letter you will read before sending, an explanation you can check, a list of ideas you will choose from.</p>
+    <div class="fmt">
+      <div><h3>Good at</h3><ul><li><b>Drafting:</b> letters, emails, thank-you notes, complaints, short speeches.</li><li><b>Explaining:</b> a confusing word, a form, a topic your grandchild studies at school.</li><li><b>Translating:</b> a short note into or out of another language.</li><li><b>Summarizing:</b> turning a long text into a few clear points.</li><li><b>Brainstorming:</b> gift ideas, meal plans, names, things to do on a rainy day.</li><li><b>Rewording:</b> making your own writing shorter, friendlier or more formal.</li></ul></div>
+      <div><h3>Bad at</h3><ul><li><b>Facts it cannot check:</b> opening hours, phone numbers, prices, quotes, names of real people.</li><li><b>Math without tools:</b> it predicts text, so it can slip on sums. Check totals with a calculator.</li><li><b>Today's news:</b> its training ends at a cutoff date. Without a web search it does not know what happened this week.</li><li><b>Anything you cannot verify:</b> if you have no way to check, do not rely on it.</li><li><b>Your personal situation:</b> it has never met you, your doctor or your bank.</li></ul></div>
+      <div class="wide watch"><h3>What can go wrong</h3><ul><li>A web search helps with recent facts, but the AI can still misread a page. Click the source links it shows and read them yourself.</li><li>The same question can get a different answer each time, because each reply is a fresh guess. If two answers disagree, that is a sign to check.</li><li>For health, money and legal questions, use it to prepare questions. Then ask a professional.</li></ul></div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b><ul><li>Current Claude models list a reliable knowledge cutoff of June 2026.</li><li>Web search is included on the Free plan. It finds information past the cutoff, with cited sources.</li></ul><p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b><ul><li>One of OpenAI's current models, GPT-6 Astra, lists a knowledge cutoff of April 30, 2026. Other models may differ.</li><li>Web search is built into ChatGPT.</li></ul><p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener">Claude models overview</a> · <a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview" target="_blank" rel="noopener">Claude tool use (web search)</a> · <a href="https://claude.com/pricing" target="_blank" rel="noopener">Claude pricing</a> · <a href="https://developers.openai.com/api/docs/models" target="_blank" rel="noopener">OpenAI models</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes</a> · <a href="https://openai.com/index/why-language-models-hallucinate/" target="_blank" rel="noopener">OpenAI: Why language models hallucinate</a></p>
+  </section>
+
+  <!-- 3. MEET THE TWO PLANETS -->
+  <section class="topic" id="two-planets">
+    <header><p class="eyebrow">The two planets</p><h2>Meet the two planets</h2></header>
+    <p class="first"><b>Do this first</b>Pick one planet to start. Both have a free plan, so you lose nothing by trying one and then the other.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3><p>This guide covers the two best-known AI chats. <b>Claude</b> is made by a company called Anthropic. <b>ChatGPT</b> is made by a company called OpenAI. They work in a similar way: you type, they answer. They differ in plans, settings, age rules and some features.</p><p>Each one runs in a web browser, as a computer program and as a phone app. Your chats follow your account, so you can start on the computer and continue on the phone.</p></div>
+      <div><h3>How to choose</h3><ol><li>Check the age rule below. If you are under 18, only one planet is open to you, and only with a parent's permission.</li><li>Think about where you will use it. Both have phone apps for iPhone and Android.</li><li>Try the free plan first. Decide later if you want more.</li></ol></div>
+      <div class="wide watch"><h3>What can go wrong</h3><ul><li>App stores contain fake look-alike apps. Check the maker's name before you install anything. See the safety rules below.</li><li>Features and plan names change often. Both companies changed a lot in 2026. Every box on this page says when we checked.</li></ul></div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b><ul><li><b>Maker:</b> Anthropic.</li><li><b>Where:</b> the website claude.ai; desktop apps for Mac, Windows and Linux (Linux is in beta, meaning a test version); phone apps for iPhone and Android.</li><li><b>Free plan:</b> yes, with limited use that resets every 5 hours and every week.</li><li><b>Minimum age:</b> 18. Anthropic may ask you to prove your age with a selfie or an ID through a service called Yoti. The phone app may use your app store's age information to block under-18s.</li><li><b>Models:</b> the free plan uses two models, Sonnet and Haiku.</li></ul><p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b><ul><li><b>Maker:</b> OpenAI.</li><li><b>Where:</b> the website chatgpt.com; desktop apps for Mac and Windows; phone apps for iPhone and Android.</li><li><b>Free plan:</b> yes. OpenAI describes it as "unlimited text chats subject to abuse guardrails," with limits on uploads, images, voice and other extras.</li><li><b>Minimum age:</b> 13. Anyone under 18 needs a parent's or guardian's permission. Accounts that seem to belong to teens go into a teen version. Adults can confirm their age through a service called Persona.</li><li><b>Parents:</b> can link to a teen's account and change some settings, but cannot read the teen's chats.</li></ul><p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://claude.com/download" target="_blank" rel="noopener">Claude download</a> · <a href="https://claude.com/pricing" target="_blank" rel="noopener">Claude pricing</a> · <a href="https://support.claude.com/en/articles/15171100-age-assurance-on-claude" target="_blank" rel="noopener">Claude age assurance</a> · <a href="https://support.claude.com/en/articles/13117299-minimum-age-requirement-access-restriction" target="_blank" rel="noopener">Claude minimum age</a> · <a href="https://chatgpt.com/pricing" target="_blank" rel="noopener">ChatGPT pricing</a> · <a href="https://help-lb.openai.com/en/articles/20001275-chatgpt-work-and-codex" target="_blank" rel="noopener">ChatGPT Work and Codex (apps)</a> · <a href="https://openai.com/policies/terms-of-use/" target="_blank" rel="noopener">OpenAI terms of use</a> · <a href="https://help.openai.com/articles/20001421" target="_blank" rel="noopener">ChatGPT for teens</a> · <a href="https://help-lb.openai.com/en/articles/12315553" target="_blank" rel="noopener">ChatGPT parental controls</a></p>
+  </section>
+
+  <!-- 4. GETTING IN -->
+  <section class="topic" id="getting-in">
+    <header><p class="eyebrow">The two planets</p><h2>Getting in: your account and your first 10 minutes</h2></header>
+    <p class="first"><b>Do this first</b>Make sure your email account has a strong password and two-step login turned on. Your email is the key that opens your AI account.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3><p>An account keeps your chats, your settings and your plan. You can start on the website or in the app. Both need an email address or a Google account.</p><p>Two-step login (also called 2FA or MFA) means the service asks for a second proof, such as a code on your phone, when you sign in. It stops most people who steal a password.</p></div>
+      <div><h3>How to</h3><ol><li>Use a computer or phone you trust, at home, not a shared library computer.</li><li>Type the web address yourself, or get the app from the official store. Do not click links in emails or ads.</li><li>Follow the planet steps below.</li><li>Before your first real question, spend two minutes on the privacy setting. Section 8 explains it.</li></ol></div>
+      <div class="wide watch"><h3>What can go wrong</h3><ul><li>Fake emails pretending to be Anthropic or OpenAI. Reach the company only through the web address you typed yourself.</li><li>In August 2026, malware on some people's computers stole Claude login information. Anthropic signed those users out and refunded charges. Keep your computer updated and do not install unknown programs.</li><li>A fake app can charge a subscription. Deleting the app does not cancel the charge. Cancel it in your app store.</li></ul></div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b><ol><li>Go to <b>claude.ai</b> in your browser, or download an app from claude.com/download.</li><li>Sign in with your email address or your Google account. Claude emails you a sign-in link. There is no Claude password to make up.</li><li>Confirm you are 18 or older. You may be asked for an age check through Yoti.</li><li>Open <b>Settings &gt; Privacy</b> and look at the switch called "Help Improve our AI models." Choose on or off.</li><li>Memory is on by default. To see what Claude remembers, open <b>Settings &gt; Your Claude</b> and choose "Manage" next to "Your memory."</li><li>Type your first message in the box and send it. Section 5 has ideas.</li><li>Because sign-in goes through your email, turn on two-step login for your email account. Claude's own help pages do not mention two-step login for Claude itself.</li></ol><p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b><ol><li>Go to <b>chatgpt.com</b> in your browser, or get the phone app. In the app store, check that the maker is <b>OpenAI</b>.</li><li>Follow the on-screen steps to create an account. If you are 13 to 17, you need a parent's or guardian's permission.</li><li>If ChatGPT puts you in the teen version by mistake, you can confirm you are an adult through a service called Persona.</li><li>Turn on two-step login: <b>Settings &gt; Security &gt; Multi-factor authentication</b>. You can use an authenticator app, a push alert, a text or WhatsApp code, or a passkey.</li><li>Open <b>Settings &gt; Data Controls</b> and look at "Improve the model for everyone." Choose on or off.</li><li>To see what ChatGPT remembers, open <b>Settings &gt; Personalization &gt; Memory</b>.</li><li>Type your first message and send it. On the Free plan in some countries, including the US, you may see ads.</li></ol><p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://support.claude.com/en/articles/13189465-log-in-to-your-claude-account" target="_blank" rel="noopener">Claude: log in</a> · <a href="https://support.claude.com/en/articles/15171100-age-assurance-on-claude" target="_blank" rel="noopener">Claude age assurance</a> · <a href="https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings" target="_blank" rel="noopener">Claude privacy settings</a> · <a href="https://support.claude.com/en/articles/11817273" target="_blank" rel="noopener">Claude memory</a> · <a href="https://helpnetsecurity.com/2026/08/31/claude-accounts-compromised-through-infostealer" target="_blank" rel="noopener">Help Net Security: Claude account thefts</a> · <a href="https://techcrunch.com/2026/08/15/how-to-tell-if-your-ai-platforms-accounts-have-been-hacked" target="_blank" rel="noopener">TechCrunch: AI account security</a> · <a href="https://help-lb.openai.com/en/articles/7967234-enabling-multi-factor-authentication-mfa-with-openai" target="_blank" rel="noopener">OpenAI: multi-factor authentication</a> · <a href="https://help.openai.com/en/articles/7730893-data-controls-faq" target="_blank" rel="noopener">OpenAI data controls FAQ</a> · <a href="https://help-lb.openai.com/en/articles/8590148" target="_blank" rel="noopener">ChatGPT memory</a> · <a href="https://help.openai.com/articles/20001421" target="_blank" rel="noopener">ChatGPT for teens</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes (ads)</a> · <a href="https://www.checkbook.org/national/consumers-notebook/articles/Fraud-Alert-Fake-ChatGPT-Apps-Commonplace-in-App-Stores-7813" target="_blank" rel="noopener">Checkbook: fake ChatGPT apps</a></p>
+  </section>
+
+  <!-- 5. FIRST CONVERSATION -->
+  <section class="topic" id="first-chat">
+    <header><p class="eyebrow">First steps</p><h2>Your first conversation</h2></header>
+    <p class="first"><b>Do this first</b>Copy one of the prompts below, change the details to fit your life, and send it. Then reply to the answer, as you would in a text conversation.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3><p>A conversation is a back-and-forth. Your first message rarely gets a perfect answer. The magic happens in the second and third messages, when you say "shorter," "simpler" or "make it warmer."</p></div>
+      <div><h3>How to</h3><ol><li>Say who you are and what you need.</li><li>Give the details it cannot guess: how long, how formal, who will read it.</li><li>Read the answer. Then ask for changes in plain words.</li><li>Start a new chat when you change subject, so old details do not mix in.</li></ol></div>
+      <div class="wide watch"><h3>What can go wrong</h3><ul><li>Before you paste a real letter, bill or form, remove names, account numbers and addresses. You can write "[my name]" instead.</li><li>If it gives you a phone number, address or price, check it on the official website before you use it.</li></ul></div>
+    </div>
+    <div class="prompts">
+      <div class="prompt"><h4>Understand a confusing letter</h4><blockquote>I received a letter from my insurance company. I have removed my name and numbers. Please explain in simple words what it says and what, if anything, I need to do. Here is the text: [paste the letter]</blockquote></div>
+      <div class="prompt"><h4>Write a polite email</h4><blockquote>Help me write a short, polite email to my landlord. The kitchen tap has dripped for two weeks. I would like it fixed this month. Keep it friendly and under 100 words.</blockquote></div>
+      <div class="prompt"><h4>Plan meals on a budget</h4><blockquote>Plan five simple dinners for two adults for this week. We have about $60 to spend. One of us does not eat pork. Give me a shopping list grouped by store aisle.</blockquote></div>
+      <div class="prompt"><h4>Prepare for a doctor's visit</h4><blockquote>I have a doctor's appointment about knee pain when I climb stairs. Help me write a short list of questions to ask and things the doctor might want to know. Do not diagnose me.</blockquote></div>
+      <div class="prompt"><h4>Explain something simply</h4><blockquote>My grandson keeps talking about "the cloud." Explain what it means like I'm a smart adult who has never worked with computers. Use one everyday example.</blockquote></div>
+      <div class="prompt"><h4>Translate a short note</h4><blockquote>Translate this note into Spanish for my neighbor. Keep it warm and simple: "Thank you for watering my plants while I was away. I brought you some tomatoes from my garden."</blockquote></div>
+      <div class="prompt"><h4>Find a kind way to say it</h4><blockquote>I need to tell my book club I can't host next month. Give me three short, kind ways to say it in a group text.</blockquote></div>
+      <div class="prompt"><h4>Brainstorm a gift</h4><blockquote>Give me ten gift ideas under $30 for my sister, who is 52, loves gardening and has just moved into a small apartment with a balcony.</blockquote></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/be-clear-and-direct" target="_blank" rel="noopener">Anthropic: be clear and direct</a> · <a href="https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-the-openai-api" target="_blank" rel="noopener">OpenAI: prompt best practices</a></p>
+  </section>
+
+  <!-- 6. SAFETY RULES -->
+  <section class="topic" id="safety">
+    <header><p class="eyebrow">Stay safe</p><h2>Five safety rules</h2></header>
+    <p class="first"><b>Do this first</b>Learn rule 1 by heart: never type a password, ID number or bank number into an AI chat.</p>
+    <div class="fmt">
+      <div class="wide"><h3>The five rules</h3><ol>
+        <li><b>Never paste passwords, ID numbers or bank numbers.</b> That includes your Social Security number, passport, card numbers and PINs. The AI does not need them to help you. Blank them out of any document first.</li>
+        <li><b>Check important answers.</b> If an answer affects your money, health, travel or safety, confirm it on an official website or with a real person.</li>
+        <li><b>It is not a doctor, lawyer or financial advisor.</b> Use it to understand words and prepare questions. Then ask a doctor, pharmacist, lawyer or licensed advisor before you act.</li>
+        <li><b>Beware voice-clone calls and fake apps.</b> Criminals can copy a loved one's voice with AI. If a "grandchild" calls in a panic asking for money, hang up and call them back on a number you know is theirs. In app stores, check that the maker is the real company.</li>
+        <li><b>You are in charge of what you send.</b> The AI only knows what you give it. You choose what to share, what to keep, and what to delete.</li>
+      </ol></div>
+      <div><h3>How to handle a scam call</h3><ol><li>Do not trust the voice, even if it sounds exactly right.</li><li>Hang up. Call the person back on a number you already know.</li><li>If you cannot reach them, check the story with other family or friends.</li><li>Treat any request for a wire transfer, crypto or gift cards as a red flag. That money is hard to get back.</li><li>Agree on a family secret word ahead of time. The FBI recommends this.</li><li>Report it at ReportFraud.ftc.gov. If you lost money, also report at ic3.gov.</li></ol></div>
+      <div><h3>How to spot a fake app</h3><ol><li>Look at the maker's name. ChatGPT's real maker is OpenAI. Claude's maker is Anthropic, and its official download page is claude.com/download.</li><li>Be suspicious of names like "Chat GTP," "AI Chat" or "powered by ChatGPT."</li><li>Be suspicious of an app that pushes you to subscribe right away. The real ChatGPT app is free to download.</li><li>If you installed a fake, cancel its subscription in your app store, then delete it.</li></ol></div>
+      <div class="wide watch"><h3>What can go wrong</h3><ul><li>If you pasted private data by mistake, delete the chat, then change any password you shared. Our <a href="help.html">Something went wrong</a> page walks you through it.</li><li>If an AI gave health advice and someone may have taken the wrong medicine, call Poison Control at 1-800-222-1222 (US, free, 24/7). In an emergency, call 911.</li><li>If you or someone you love is in emotional crisis, call or text 988 (US, 24/7).</li><li>A chatbot may tell you what you want to hear. Psychologists warn it should not replace a qualified mental health professional.</li></ul></div>
+    </div>
+    <aside class="bertie">
+      <span class="face" aria-hidden="true"></span>
+      <div><p><b>Bertie, again</b>Bertie pasted his whole bank statement into a chat and asked, "Why am I always broke?" The AI gave sensible advice about the coffee shop. Three seconds later Bertie noticed his full account number sitting in the chat.</p><p class="lesson">Blank out numbers before you paste. The advice works just as well without them.</p></div>
+    </aside>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b><ul><li>Claude's memory never saves ID or financial account numbers. Health, politics and religion are not saved to memory unless you opt in.</li><li>Those memory rules do not cover the chat itself. What you paste stays in that chat until you delete it.</li><li>Press thumbs-down to report a wrong or harmful answer.</li></ul><p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b><ul><li>You can lock selected chats behind a PIN or your phone's face or fingerprint check.</li><li>Under Settings &gt; Security you can see your active sessions and choose "Log out of all devices" if something looks wrong.</li><li>Ads, where shown, do not appear in chats about sensitive topics such as health, mental health or politics, OpenAI says.</li></ul><p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes" target="_blank" rel="noopener">FTC: family emergency scams</a> · <a href="https://www.ic3.gov/psa/2024/psa241203" target="_blank" rel="noopener">FBI IC3 alert</a> · <a href="https://www.checkbook.org/national/consumers-notebook/articles/Fraud-Alert-Fake-ChatGPT-Apps-Commonplace-in-App-Stores-7813" target="_blank" rel="noopener">Checkbook: fake ChatGPT apps</a> · <a href="https://consumer.ftc.gov/consumer-alerts/2024/12/phishing-scams-can-be-hard-spot" target="_blank" rel="noopener">FTC: phishing</a> · <a href="https://www.identitytheft.gov/assets/pdf/Data_Breach.pdf" target="_blank" rel="noopener">IdentityTheft.gov guide</a> · <a href="https://www.poison.org/how-to-get-help-from-poison-control" target="_blank" rel="noopener">Poison Control</a> · <a href="https://www.fcc.gov/988-suicide-and-crisis-lifeline" target="_blank" rel="noopener">FCC: 988 Lifeline</a> · <a href="https://www.apa.org/news/press/releases/2025/11/ai-wellness-apps-mental-health" target="_blank" rel="noopener">APA health advisory</a> · <a href="https://support.claude.com/en/articles/11817273" target="_blank" rel="noopener">Claude memory</a> · <a href="https://support.claude.com/en/articles/8525154" target="_blank" rel="noopener">Claude help: hallucinations</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes</a> · <a href="https://techcrunch.com/2026/08/15/how-to-tell-if-your-ai-platforms-accounts-have-been-hacked" target="_blank" rel="noopener">TechCrunch: AI account security</a> · <a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">OpenAI: current plan details</a></p>
+  </section>
+
+  <!-- 7. FREE VS PAID -->
+  <section class="topic" id="free-paid">
+    <header><p class="eyebrow">Money</p><h2>Free vs paid</h2></header>
+    <p class="first"><b>Do this first</b>Start free. Use the free plan for at least two weeks before you pay for anything.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3><p>Both planets have a free plan that is enough for everyday questions, letters and explanations. Paid plans give you more use before you hit a limit, stronger models and extra tools. A paid plan does not make the AI always right.</p></div>
+      <div><h3>How to decide</h3><ol><li>Use the free plan normally for two weeks.</li><li>Notice if you keep hitting the limit, or keep needing a feature the free plan lacks.</li><li>If you do, try the cheapest paid plan for one month.</li><li>Put a reminder in your calendar to review it before the next payment.</li></ol></div>
+      <div class="wide watch"><h3>What can go wrong</h3><ul><li>Subscriptions renew automatically. Cancel through the same place you paid: the website or your app store.</li><li>Higher tiers are built for heavy daily work and programming. A beginner does not need them.</li><li>Prices change. Always check the official pricing page before you pay.</li></ul></div>
+    </div>
+    <h3 class="chk-title">Planet Claude plans</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Plan</th><th>Price (US)</th><th>What you get, in short</th></tr></thead>
+      <tbody>
+        <tr><td>Free</td><td class="num">$0</td><td>Limited use, reset every 5 hours and every week. Sonnet and Haiku models. Chat, web search, memory and file creation included.</td></tr>
+        <tr><td>Pro</td><td class="num">$20/mo, or $17/mo yearly ($200 up front)</td><td>More use, the Opus model, Research (a longer, deeper web search) and extra tools.</td></tr>
+        <tr><td>Max</td><td class="num">$100/mo</td><td>5 times Pro usage. Priority at busy times.</td></tr>
+        <tr><td>Ultra</td><td class="num">$200/mo</td><td>10 times Pro usage per week.</td></tr>
+        <tr><td>Team</td><td class="num">from $20/seat/mo yearly ($25 monthly)</td><td>For workplaces with 2 to 150 people.</td></tr>
+        <tr><td>Enterprise</td><td class="num">$20/seat/mo yearly, plus usage</td><td>For large organizations, 20 seats minimum.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="src">Checked Nov 2026 · Prices from <a href="https://claude.com/pricing" target="_blank" rel="noopener">claude.com/pricing</a> · <a href="https://support.claude.com/en/articles/11647753-understanding-usage-and-length-limits" target="_blank" rel="noopener">Claude usage limits</a></p>
+    <h3 class="chk-title">Planet ChatGPT plans</h3>
+    <div class="tbl"><table>
+      <thead><tr><th>Plan</th><th>Price (US)</th><th>What you get, in short</th></tr></thead>
+      <tbody>
+        <tr><td>Free</td><td class="num">$0</td><td>"Unlimited text chats subject to abuse guardrails." Limited uploads, images, voice and deep research. May show ads in the US and some other countries.</td></tr>
+        <tr><td>Go</td><td class="num">$8/mo</td><td>More messages, uploads, images and voice, and longer memory. "This plan may include ads."</td></tr>
+        <tr><td>Plus</td><td class="num">$20/mo</td><td>Expanded use, stronger reasoning, deep research and projects. No ads.</td></tr>
+        <tr><td>Pro</td><td class="num">$100, $200 or $500/mo</td><td>Three tiers for very heavy use. No yearly billing on Go, Plus or Pro.</td></tr>
+        <tr><td>Business</td><td class="num">Standard $20/seat/mo yearly ($25 monthly); Premium $100 yearly ($125 monthly)</td><td>At least 2 seats. Enterprise is custom-priced; Edu is institution-priced.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="src">Checked Nov 2026 · OpenAI lists current US consumer prices on its pricing page: Go $8, Plus $20, and Pro $100, $200 or $500 per month. Business Standard seats are $20/month each billed annually ($25 monthly); Premium seats are $100 annually ($125 monthly). Enterprise is custom-priced; Edu pricing is institution-specific. Prices and features can change; check before you pay. Sources: <a href="https://chatgpt.com/pricing/" target="_blank" rel="noopener">ChatGPT pricing</a> · <a href="https://openai.com/index/introducing-chatgpt-go/" target="_blank" rel="noopener">OpenAI: introducing ChatGPT Go</a> · <a href="https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers" target="_blank" rel="noopener">OpenAI: Pro tiers</a> · <a href="https://openai.com/business/pricing/" target="_blank" rel="noopener">OpenAI: Business and Enterprise pricing</a></p>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b><ul><li>When you hit a limit, you can wait for it to reset, upgrade, or pay for extra usage credits.</li><li>You can check how much you have used under <b>Settings &gt; Usage</b>.</li><li>Anthropic says it "may adjust limits."</li></ul><p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b><ul><li>Free and Go may show ads. Plus, Pro, Business, Enterprise and Edu have no ads.</li><li>When you hit a limit on stronger settings, ChatGPT may switch you to a different model.</li><li>Go, Plus and Pro have no yearly or prepaid option.</li></ul><p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://support.claude.com/en/articles/11647753-understanding-usage-and-length-limits" target="_blank" rel="noopener">Claude usage limits</a> · <a href="https://help-lb.openai.com/en/articles/11909943" target="_blank" rel="noopener">ChatGPT model selector</a> · <a href="https://help-lb.openai.com/en/articles/9793128" target="_blank" rel="noopener">OpenAI: Pro plan</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes</a></p>
+  </section>
+
+  <!-- 8. PRIVACY -->
+  <section class="topic" id="privacy">
+    <header><p class="eyebrow">Stay safe</p><h2>Privacy basics</h2></header>
+    <p class="first"><b>Do this first</b>Open your privacy settings today and decide whether the company may use your chats to train future AI. Do not assume what the switch is set to. Look.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3><p><b>Training:</b> companies can use chats to improve future versions of their AI. On personal plans you can say no.</p><p><b>Temporary chat:</b> a chat that is not saved to your history and is not used for training. Good for one-off private questions.</p><p><b>Memory:</b> the AI saves facts about you between chats, such as your job or preferences. You can view, edit or turn this off.</p><p><b>Deleting:</b> removes a chat from your list. The company then removes it from its systems after a set time.</p></div>
+      <div><h3>How to</h3><ol><li>Find the training switch on your planet (below) and choose.</li><li>For a private question, start a temporary chat instead of a normal one.</li><li>Look at your memory once a month and delete anything you do not want kept.</li><li>Delete chats you no longer need.</li></ol></div>
+      <div class="wide watch"><h3>What can go wrong</h3><ul><li>Turning off training stops future use only. It does not undo past use.</li><li>On both planets, deleting a chat does not delete the memories made from it. Delete those separately in the memory settings.</li><li>Archiving a chat is not deleting it.</li></ul></div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b><ul><li><b>Training switch:</b> Settings &gt; Privacy, "Help Improve our AI models." Anthropic explains how to change this setting but does not state one default for every account. Check yours rather than assuming it is on or off.</li><li><b>How long data is kept:</b> with training on, up to 5 years in de-identified form. With training off, 30 days.</li><li><b>Temporary chat:</b> called Incognito. Click the ghost icon in a new chat. It is not saved to history or memory and is never used for training.</li><li><b>Delete a chat:</b> open the "⋮" menu, then Delete. It is removed from Anthropic's systems within 30 days.</li><li><b>Memory:</b> Settings &gt; Your Claude, then "Manage" next to "Your memory." You can also pause or reset memory.</li></ul><p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b><ul><li><b>Training switch:</b> Settings &gt; Data Controls, "Improve the model for everyone." It covers your whole account. Check what yours is set to.</li><li><b>Temporary chat:</b> called Temporary Chat. It does not create memories, is not used for training, and is deleted within 30 days.</li><li><b>Delete a chat:</b> open the "⋯" menu next to the chat, then Delete. OpenAI says it removes deleted chats from its systems within 30 days. Archiving a chat does not delete it.</li><li><b>Memory:</b> Settings &gt; Personalization &gt; Memory. You can correct items, delete them, or turn memory off.</li><li><b>Your data:</b> export it or delete your account from Data Controls.</li></ul><p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings" target="_blank" rel="noopener">Claude: training setting</a> · <a href="https://anthropic.com/news/updates-to-our-consumer-terms" target="_blank" rel="noopener">Anthropic: consumer terms update</a> · <a href="https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data" target="_blank" rel="noopener">Claude: data retention</a> · <a href="https://support.claude.com/en/articles/8230524-delete-or-rename-a-conversation" target="_blank" rel="noopener">Claude: delete a chat</a> · <a href="https://support.claude.com/en/articles/11817273" target="_blank" rel="noopener">Claude memory</a> · <a href="https://help.openai.com/en/articles/7730893-data-controls-faq" target="_blank" rel="noopener">OpenAI data controls FAQ</a> · <a href="https://help-lb.openai.com/en/articles/8590148" target="_blank" rel="noopener">ChatGPT memory</a> · <a href="https://help-lb.openai.com/en/articles/8809935-how-to-delete-and-archive-chats-in-chatgpt" target="_blank" rel="noopener">OpenAI: delete and archive chats</a></p>
+  </section>
+
+  <!-- 9. VOICE -->
+  <section class="topic" id="voice">
+    <header><p class="eyebrow">First steps</p><h2>Talking by voice</h2></header>
+    <p class="first"><b>Do this first</b>Try voice in a quiet room on your phone app. Ask one simple question out loud, such as "What can I cook with eggs, spinach and cheese?"</p>
+    <div class="fmt">
+      <div><h3>What it is</h3><p>Voice mode lets you speak instead of type, and the AI answers out loud. It helps if typing is hard, your hands are busy, or you think better by talking. The same rules apply: it can be wrong, and you still choose what you share.</p></div>
+      <div><h3>How to</h3><ol><li>Open the app and find the voice option (see your planet below).</li><li>Speak in normal sentences. You can pause and think.</li><li>Interrupt or say "stop" if it talks too long. Ask it to "keep answers short."</li><li>Read the written record afterward if you want to keep the answer.</li></ol></div>
+      <div class="wide watch"><h3>What can go wrong</h3><ul><li>In a public place, people around you can hear both sides.</li><li>Do not say passwords or card numbers out loud to it, for the same reason you would not type them.</li><li>An AI voice in the app is a different thing from a scam call using a cloned voice. If a phone call from "family" asks for money, follow the scam-call steps in section 6.</li></ul></div>
+    </div>
+    <div class="planets">
+      <div class="planet claude"><b>On Planet Claude</b><ul><li>Voice mode is in beta (a test version) and available on all plans, including Free.</li><li>Works on phone, desktop and web. Tap the sound-wave icon to start.</li><li>Choose from preset voices. Use hands-free or push-to-talk.</li><li>Claude saves a text transcript of the conversation.</li><li>Voice use counts toward your usage limit.</li></ul><p class="checked">Checked Nov 2026</p></div>
+      <div class="planet gpt"><b>On Planet ChatGPT</b><ul><li>Voice is included on Free with limits.</li><li>Go and Plus get 3 hours a day. Pro $100 gets 15 hours a day. Pro $200 is unlimited.</li><li>Works on phone and web. Tap the Voice icon in the message bar to start.</li><li>ChatGPT adds a text transcript to the chat afterward. OpenAI keeps the audio clips for 30 days.</li></ul><p class="checked">Checked Nov 2026</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://support.claude.com/en/articles/11101966-use-voice-mode" target="_blank" rel="noopener">Claude: voice mode</a> · <a href="https://chatgpt.com/pricing" target="_blank" rel="noopener">ChatGPT pricing</a> · <a href="https://help-lb.openai.com/en/articles/20001274" target="_blank" rel="noopener">ChatGPT voice mode FAQ</a> · <a href="https://help-lb.openai.com/en/articles/6825453-chatgpt-release-notes" target="_blank" rel="noopener">ChatGPT release notes (voice)</a></p>
+  </section>
+
+  <!-- 10. MYTHS -->
+  <section class="topic" id="myths">
+    <header><p class="eyebrow">Clear thinking</p><h2>Myth vs fact</h2></header>
+    <p class="first"><b>Do this first</b>Read these six cards. Each one is a belief that leads beginners into trouble.</p>
+    <div class="myths">
+      <div class="myth"><p>If it sounds sure, it must be right.</p><p>Confidence is only its writing style. Both makers warn that their AI can state false things smoothly. Check what matters.</p></div>
+      <div class="myth"><p>The AI understands me and has feelings.</p><p>It predicts text based on patterns in writing. Pediatricians advise explaining to children that bots do not think or feel. The same holds for adults.</p></div>
+      <div class="myth"><p>It knows today's news.</p><p>Its training stops at a cutoff date. It knows recent events only when it searches the web, and then you should read the sources it links.</p></div>
+      <div class="myth"><p>You have to pay to use it.</p><p>Both Claude and ChatGPT have free plans that cover everyday questions, letters and explanations.</p></div>
+      <div class="myth"><p>Paying for a better plan means it stops making mistakes.</p><p>Paid plans give more usage and stronger models. Every model can still be wrong.</p></div>
+      <div class="myth"><p>You need special commands or computer skills.</p><p>You talk to it in plain language. Anthropic suggests treating it like a brilliant new employee who does not know your situation yet: explain clearly what you want.</p></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://openai.com/index/why-language-models-hallucinate/" target="_blank" rel="noopener">OpenAI: Why language models hallucinate</a> · <a href="https://support.claude.com/en/articles/8525154" target="_blank" rel="noopener">Claude help: hallucinations</a> · <a href="https://healthychildren.org/English/family-life/Media/Pages/are-ai-chatbots-safe-for-kids.aspx" target="_blank" rel="noopener">AAP: AI chatbots and kids</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener">Claude models overview</a> · <a href="https://claude.com/pricing" target="_blank" rel="noopener">Claude pricing</a> · <a href="https://chatgpt.com/pricing" target="_blank" rel="noopener">ChatGPT pricing</a> · <a href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/be-clear-and-direct" target="_blank" rel="noopener">Anthropic: be clear and direct</a></p>
+  </section>
+
+  <!-- 11. TEACH SOMEONE -->
+  <section class="topic" id="teach">
+    <header><p class="eyebrow">Pass it on</p><h2>Teach someone you love</h2></header>
+    <p class="first"><b>Do this first</b>Sit side by side at a table with their own phone or computer. Let them hold it and do the tapping. You only talk.</p>
+    <div class="fmt">
+      <div><h3>What it is</h3><p>A 15-minute kitchen-table script for a parent, grandparent or friend. It covers the account, one real task, one safety lesson and one privacy step. The words in quotes are suggestions. Say them in your own way.</p></div>
+      <div><h3>Before you sit down</h3><ul><li>Pick a planet. If the person is under 18, Claude is not an option, and ChatGPT needs a parent's permission.</li><li>Make sure they can open their own email, because sign-in may send a code there.</li><li>Think of one real task from their life: a letter, a recipe, a question about a hobby.</li></ul></div>
+      <div class="wide"><h3>The 15-minute script</h3><ol>
+        <li><b>Minute 0 to 2. Explain it in one breath.</b> Say: "This is a program that has read a huge amount of writing. It is very good at writing and explaining. It is also a confident guesser, so we check anything important."</li>
+        <li><b>Minute 2 to 5. Get in.</b> Help them type claude.ai or chatgpt.com, or install the app. Say: "Let's check the maker's name in the store. Fake apps exist." Follow the sign-in steps from section 4 of this page.</li>
+        <li><b>Minute 5 to 6. Privacy switch.</b> Open the training setting together. Say: "This decides whether the company can use your chats to improve its AI. Your choice. Let's look at what it is set to."</li>
+        <li><b>Minute 6 to 10. One real task.</b> Let them type a request from their life. Say: "Talk to it like a helpful person. Tell it who you are and what you need." After the answer, say: "Now tell it what to change. Shorter? Simpler? Friendlier?"</li>
+        <li><b>Minute 10 to 12. Catch a mistake on purpose.</b> Ask it a local fact you both know, such as the opening hours of a nearby shop. Say: "See? It may sound sure. We check facts like this on the shop's own website."</li>
+        <li><b>Minute 12 to 14. The safety promise.</b> Say: "Three things never go in here: passwords, ID numbers and bank numbers. And if anyone calls with my voice asking for money, hang up and call me back." Agree on a family secret word now.</li>
+        <li><b>Minute 14 to 15. Next time.</b> Bookmark the site or move the app to their home screen. Say: "Try one thing on your own this week. Call me if it does something strange." Leave them this page.</li>
+      </ol></div>
+      <div class="wide watch"><h3>What can go wrong</h3><ul><li>Taking the device and doing it yourself. They will not remember steps they did not do.</li><li>Showing too much. Skip the advanced menus. One task, one safety rule, one setting is enough for day one.</li><li>Skipping the voice-clone talk. It is the rule most likely to protect their money.</li></ul></div>
+    </div>
+    <p class="src">Checked Nov 2026 · Sources: <a href="https://consumer.ftc.gov/consumer-alerts/2023/03/scammers-use-ai-enhance-their-family-emergency-schemes" target="_blank" rel="noopener">FTC: family emergency scams</a> · <a href="https://www.ic3.gov/psa/2024/psa241203" target="_blank" rel="noopener">FBI IC3 alert (secret word)</a> · <a href="https://www.checkbook.org/national/consumers-notebook/articles/Fraud-Alert-Fake-ChatGPT-Apps-Commonplace-in-App-Stores-7813" target="_blank" rel="noopener">Checkbook: fake ChatGPT apps</a> · <a href="https://support.claude.com/en/articles/13117299-minimum-age-requirement-access-restriction" target="_blank" rel="noopener">Claude minimum age</a> · <a href="https://openai.com/policies/terms-of-use/" target="_blank" rel="noopener">OpenAI terms of use</a></p>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="levelup" id="checklist">
+    <h2>Ready for the next level?</h2>
+    <ul class="check">
+      <li><label><input type="checkbox" id="l1-1"><span>I can explain in one sentence what an AI chat is.</span></label></li>
+      <li><label><input type="checkbox" id="l1-2"><span>I know three things it is good at and three it is bad at.</span></label></li>
+      <li><label><input type="checkbox" id="l1-3"><span>I know who makes Claude and who makes ChatGPT, and the age rule for each.</span></label></li>
+      <li><label><input type="checkbox" id="l1-4"><span>I have an account on at least one planet.</span></label></li>
+      <li><label><input type="checkbox" id="l1-5"><span>My email account has two-step login turned on.</span></label></li>
+      <li><label><input type="checkbox" id="l1-6"><span>I have had a conversation and asked for at least one change to an answer.</span></label></li>
+      <li><label><input type="checkbox" id="l1-7"><span>I can say the five safety rules without looking.</span></label></li>
+      <li><label><input type="checkbox" id="l1-8"><span>My family has a secret word for emergency calls.</span></label></li>
+      <li><label><input type="checkbox" id="l1-9"><span>I checked my training setting and chose on or off.</span></label></li>
+      <li><label><input type="checkbox" id="l1-10"><span>I know how to start a temporary chat and how to delete a chat.</span></label></li>
+      <li><label><input type="checkbox" id="l1-11"><span>I checked one AI answer against an official source.</span></label></li>
+      <li><label><input type="checkbox" id="l1-12"><span>I am using the free plan and know what paid plans add.</span></label></li>
+    </ul>
+  </section>
+
+  <nav class="next" aria-label="Where next">
+    <a href="level2.html"><small>Next stage</small><span>2 · Low orbit</span></a>
+  </nav>
+
+  <footer>
+    <p><strong>Disclosure:</strong> this guide was written with Claude, which is made by Anthropic. We compare Claude and ChatGPT using each company's own help pages and pricing, and we don't pick a winner. Features and prices change often; every box says when it was checked.</p>
+    <p>Have a tip or a correction? Send it in, and corrections go at the top of the next build.</p>
+    <p class="tracking-note">This guide uses a small visit sensor to count visits and observed active time. It does not read page text or the page URL.</p>
+    <p><a href="#top">Back to top</a></p>
+  </footer>
+</div>
+<script defer src="visit-sensor.js"></script>
+</body>
+</html>
