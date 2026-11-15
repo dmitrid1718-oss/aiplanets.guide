@@ -1,29 +1,29 @@
 /* Two Planets — AI Survival Guide. Layout: a travel guide between two worlds. Each level is a stage of the trip
    (Launch pad, Low orbit, Deep space, Mission control). One reading column; every topic uses the same parts. */
 :root{
-  --bg:#f4f5fa;
-  --surface:#ffffff;
-  --ink:#141a2e;
-  --muted:#525b75;
-  --line:#d6dae8;
-  --accent:#3d4fc4;        /* navigation ink, star-chart blue */
-  --accent-soft:#e6e9fb;
-  --claude:#b8532c;        /* Planet Claude: clay */
-  --claude-soft:#fbeae2;
-  --gpt:#0f7a5c;           /* Planet ChatGPT: green */
-  --gpt-soft:#dff3ec;
-  --warn:#8a5a10;
-  --warn-soft:#fbf0d9;
-  --ok:#2c6a3c;
-  --code-bg:#eef0f7;
-  --font-display:"Space Grotesk","Trebuchet MS",Arial,sans-serif;
-  --font-body:"Atkinson Hyperlegible","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-  --font-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
+  --bg:#0d191b;
+  --surface:#132426;
+  --ink:#e6eeeb;
+  --muted:#a3b5b0;
+  --line:#2b4141;
+  --accent:#71d7c8;        /* navigation ink, star-chart blue */
+  --accent-soft:#183b3a;
+  --claude:#df8058;        /* Planet Claude: clay */
+  --claude-soft:#38231e;
+  --gpt:#53cbb4;           /* Planet ChatGPT: green */
+  --gpt-soft:#173a35;
+  --warn:#e7b66a;
+  --warn-soft:#352b1d;
+  --ok:#83d7a4;
+  --code-bg:#101e20;
+  --font-display:"IBM Plex Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-body:"IBM Plex Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#0c1020;--surface:#151b31;--ink:#e8ebf7;--muted:#a3abc6;--line:#2a3352;
-  --accent:#9aa8ff;--accent-soft:#1d2546;--claude:#f0956c;--claude-soft:#33201a;
-  --gpt:#5fd1a8;--gpt-soft:#12302a;--warn:#e9b65c;--warn-soft:#2d2414;--ok:#7fc890;--code-bg:#0f1428;color-scheme:dark}}
+  --bg:#0d191b;--surface:#132426;--ink:#e6eeeb;--muted:#a3b5b0;--line:#2b4141;
+  --accent:#71d7c8;--accent-soft:#183b3a;--claude:#df8058;--claude-soft:#38231e;
+  --gpt:#53cbb4;--gpt-soft:#173a35;--warn:#e7b66a;--warn-soft:#352b1d;--ok:#83d7a4;--code-bg:#101e20;color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0c1020;--surface:#151b31;--ink:#e8ebf7;--muted:#a3abc6;--line:#2a3352;
   --accent:#9aa8ff;--accent-soft:#1d2546;--claude:#f0956c;--claude-soft:#33201a;
@@ -186,3 +186,18 @@ footer strong{color:var(--ink)}
 /* Let grid children shrink so code blocks scroll inside instead of widening the page */
 .topic > *, .lecture > *, .planet > *, .levelup > *, .fmt > div > *, .watch > *{min-width:0}
 li{min-width:0}
+
+/* AINet visual language: deep teal, quiet mint signals, editorial edges. */
+body{background:radial-gradient(ellipse at 50% 0%,#14292b 0,var(--bg) 58%);}
+.eyebrow,.mono,code,kbd,.topnav ul a,.planet .checked,.src,.tracking-note{font-family:var(--font-mono);}
+.topnav{border-bottom:1px solid var(--line);}
+.topnav ul a[aria-current="page"]{border-color:var(--accent);color:var(--accent);}
+.topnav ul a.sos{color:var(--warn);border-color:var(--warn);}
+.door,.quiz,.levelup,.topic,.planet,.prompt,.myth,.bertie,.stages a,.same>div,.next a{border-radius:4px;}
+.door,.quiz,.levelup,.next a{border-color:var(--line);}
+.door:hover,.stages a:hover{border-color:var(--accent);}
+.btn{border-radius:4px;background:var(--accent);color:#09201d;}
+.btn.ghost{color:var(--accent);border-color:var(--accent);}
+.bertie .face{border-radius:4px;background:var(--accent);}
+.bertie .face::before,.bertie .face::after{background:var(--bg);}
+footer{border-top:1px solid var(--line);}
