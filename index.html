@@ -69,6 +69,13 @@
 </style>
 
 <style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0d191b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="AI Planets">
+<link rel="apple-touch-icon" href="/icons/apple-touch-icon.png">
+<script src="/app.js" defer></script>
 </head>
 <body>
 <div class="wrap" id="top">
@@ -96,6 +103,16 @@
       <div class="pl g"><span>ChatGPT</span></div>
     </div>
   </header>
+
+  <aside style="margin:0 0 24px;padding:16px 20px;border:1px solid var(--line);border-radius:8px;background:var(--surface)">
+    <details><summary style="cursor:pointer;color:var(--accent)">Keep this guide on your phone</summary>
+      <p style="margin-top:12px">On iPhone or iPad: open in Safari, tap Share, then Add to Home Screen. On Android: open your browser menu and choose Install app or Add to Home screen.</p>
+      <p>The six guide pages and quiz can work offline after the first successful download. Outside links need internet. Your last lesson is remembered on this device.</p>
+      <button id="install-guide" type="button" class="btn" hidden style="margin-top:12px">Install guide</button>
+    </details>
+    <p id="offline-status" role="status" style="font-size:14px;color:var(--muted);margin-top:8px">Connect once to save the guide for offline reading.</p>
+    <a id="resume-lesson" hidden style="display:none;margin-top:8px">Continue reading</a>
+  </aside>
 
   <nav class="doors" aria-label="Choose where to start">
     <a class="door" href="#quiz"><span>Find my level</span><small>Five quick questions. Then go straight to your stage.</small></a>
