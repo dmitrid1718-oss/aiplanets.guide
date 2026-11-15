@@ -1,6 +1,6 @@
 /* Two Planets — AI Survival Guide. Layout: a travel guide between two worlds. Each level is a stage of the trip
    (Launch pad, Low orbit, Deep space, Mission control). One reading column; every topic uses the same parts. */
-:root{
+:root{color-scheme:dark;
   --bg:#0d191b;
   --surface:#132426;
   --ink:#e6eeeb;
