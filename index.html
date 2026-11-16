@@ -136,10 +136,10 @@
     <p>Start anywhere. Each stage ends with a checklist, so you know when you're ready for the next one.</p>
   </div>
   <ol class="stages">
-    <li><a href="level1.html"><span class="n">Level 1 · Launch pad</span><h3>I know nothing about AI</h3><p>What an AI chat is, your first conversation, five safety rules, free vs paid, and a script to teach someone you love.</p><span class="alt"><i style="width:25%"></i></span></a></li>
-    <li><a href="level2.html"><span class="n">Level 2 · Low orbit</span><h3>I use it sometimes</h3><p>How to ask well, checking answers, files and photos, memory basics, privacy settings and 24 ready-to-use prompts for everyday tasks.</p><span class="alt"><i style="width:50%"></i></span></a></li>
-    <li><a href="level3.html"><span class="n">Level 3 · Deep space</span><h3>I'm good. Make me a pro.</h3><p>How AI works, the context window, memory in detail, connectors and email, agents, workflows and fact-checking.</p><span class="alt"><i style="width:75%"></i></span></a></li>
-    <li><a href="level4.html"><span class="n">Level 4 · Mission control</span><h3>I build with AI</h3><p>APIs, coding agents, MCP, Git and GitHub, hosting, DNS, Google Search Console, domain email, backups and encryption.</p><span class="alt"><i style="width:100%"></i></span></a></li>
+    <li><a href="level1.html" data-preview="What an AI chat is, your first conversation, five safety rules, free vs paid, and a script to teach someone you love."><span class="n">Level 1 · Launch pad</span><h3>I know nothing about AI</h3><p>Your first conversation, with confidence.</p><span class="alt"><i style="width:25%"></i></span></a></li>
+    <li><a href="level2.html" data-preview="How to ask well, checking answers, files and photos, memory basics, privacy settings and 24 ready-to-use prompts for everyday tasks."><span class="n">Level 2 · Low orbit</span><h3>I use it sometimes</h3><p>Better answers for everyday tasks.</p><span class="alt"><i style="width:50%"></i></span></a></li>
+    <li><a href="level3.html" data-preview="How AI works, the context window, memory in detail, connectors and email, agents, workflows and fact-checking."><span class="n">Level 3 · Deep space</span><h3>I'm good. Make me a pro.</h3><p>Turn regular use into deeper skills.</p><span class="alt"><i style="width:75%"></i></span></a></li>
+    <li><a href="level4.html" data-preview="APIs, coding agents, MCP, Git and GitHub, hosting, DNS, Google Search Console, domain email, backups and encryption."><span class="n">Level 4 · Mission control</span><h3>I build with AI</h3><p>Build, publish and protect your tools.</p><span class="alt"><i style="width:100%"></i></span></a></li>
   </ol>
 
   <section class="band" id="quiz" style="scroll-margin-top:12px">
@@ -269,7 +269,7 @@
   else if(a.hash&&new URL(a.href).pathname===location.pathname){
    let target;try{target=document.getElementById(decodeURIComponent(a.hash.slice(1)))}catch{}
    if(!target)return null;description=clean((target.querySelector('.first')||target.querySelector('.lead')||target.querySelector('p:not(.eyebrow)'))?.textContent);description=description.replace(/^Do this first\s*/i,'');note='Jump to this section';
-  }else if(a.closest('.stages,.doors')){description=clean(a.querySelector('p,small')?.textContent);label=clean(a.querySelector('h3,span')?.textContent);note='Open this guide';}
+  }else if(a.closest('.stages,.doors')){description=clean(a.dataset.preview||a.querySelector('p,small')?.textContent);label=clean(a.querySelector('h3,span')?.textContent);note='Open this guide';}
   else {
    const known={
     'investigations/agent-safety-file-001.html':['Agent Safety File 001','The open evidence log: what has been tested, what remains uncertain and the next review.'],
